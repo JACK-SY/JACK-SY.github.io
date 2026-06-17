@@ -27,7 +27,7 @@
   <!-- Custom Files headBegin end-->
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="/diy-font/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
@@ -100,7 +100,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: HYXiaoMaiTiJ, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -709,125 +709,9 @@ button {
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
 }
-.cover-wrapper.dock .menu,
-.cover-wrapper.featured .menu,
-.cover-wrapper.focus .menu {
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-.cover-wrapper.dock .menu .list-h a,
-.cover-wrapper.featured .menu .list-h a,
-.cover-wrapper.focus .menu .list-h a {
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  padding: 12px;
-  line-height: 24px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-bottom: none;
-  text-align: center;
-  align-content: flex-end;
-  color: rgba(68,68,68,0.7);
-  font-size: 1.5rem;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h a,
-  .cover-wrapper.featured .menu .list-h a,
-  .cover-wrapper.focus .menu .list-h a {
-    padding: 12px 8px;
-  }
-}
-.cover-wrapper.dock .menu .list-h a i,
-.cover-wrapper.featured .menu .list-h a i,
-.cover-wrapper.focus .menu .list-h a i {
-  margin: 8px;
-}
-.cover-wrapper.dock .menu .list-h a p,
-.cover-wrapper.featured .menu .list-h a p,
-.cover-wrapper.focus .menu .list-h a p {
-  font-size: 0.875rem;
-}
-.cover-wrapper.dock .menu .list-h a.active,
-.cover-wrapper.featured .menu .list-h a.active,
-.cover-wrapper.focus .menu .list-h a.active {
-  background: var(--color-card);
-  backdrop-filter: none;
-}
-.cover-wrapper.dock .menu .list-h a.active i,
-.cover-wrapper.featured .menu .list-h a.active i,
-.cover-wrapper.focus .menu .list-h a.active i,
-.cover-wrapper.dock .menu .list-h a.active i+p,
-.cover-wrapper.featured .menu .list-h a.active i+p,
-.cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #3dd9b6;
-}
-.cover-wrapper.dock .menu .list-h a.active img+p,
-.cover-wrapper.featured .menu .list-h a.active img+p,
-.cover-wrapper.focus .menu .list-h a.active img+p {
-  color: var(--color-text);
-}
-.cover-wrapper.dock .menu .list-h a:hover,
-.cover-wrapper.featured .menu .list-h a:hover,
-.cover-wrapper.focus .menu .list-h a:hover {
-  background: var(--color-card);
-}
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
-}
-.cover-wrapper.dock .menu {
-  background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #3dd9b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
-}
-@supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: saturate(200%) blur(20px);
-  }
-}
 @font-face {
-  font-family: 'UbuntuMono';
-  src: url("https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-family: 'HYXiaoMaiTiJ';
+  src: url("/diy-font/HYXiaoMaiTiJ.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -968,7 +852,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: HYXiaoMaiTiJ, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -2372,7 +2256,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1781667156501),
+    lastupdate: new Date(1781683548458),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2380,7 +2264,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       fancybox_js: 'https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate"],
+      for_page: ["blogger","category","nav","recent","webinfo"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2466,13 +2350,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="首页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-house fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -2483,30 +2367,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/" title="笔记"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-home"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
                 </a>
                 
               </li>
@@ -2534,11 +2401,28 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
+                href="/" title="留言"
                   
                   
                   
-                    active-action="action-friends"
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="友链"
+                  
+                  
+                  
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2570,7 +2454,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
         </form>
       </div>
       
@@ -2587,13 +2471,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="首页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-house fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -2604,30 +2488,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
+                href="/" title="笔记"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-home"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
                 </a>
                 
               </li>
@@ -2655,11 +2522,28 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
+                href="/" title="留言"
                   
                   
                   
-                    active-action="action-friends"
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="友链"
+                  
+                  
+                  
+                    active-action="action-home"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2702,70 +2586,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
     
       <!-- see: /layout/_partial/scripts/_ctrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="half" class='cover-wrapper  blank' style="display: ;">
         
+
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">Volantis</p>
-    
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/v4/getting-started/"
-              
-              
-              active-action="action-v4getting-started">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f5c3.svg'><p>文档</p>
-            </a>
-          
-            <a href="/faqs/"
-              
-              
-              active-action="action-faqs">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f516.svg'><p>帮助</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              active-action="action-examples">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              active-action="action-contributors">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
 
         <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
@@ -2943,25 +2768,144 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     
     
       
+<section class="widget nav desktop mobile pjax">
   
-  <section class="widget tagcloud desktop mobile pjax">
-    
   <header>
     
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fa-solid fa-list-ul fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
     
   </header>
 
 
-    <div class='content'>
-      <a href="/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%AA%E4%BA%BAblog/" style="font-size: 14px; color: #999">第一次个人blog</a>
+  <div class='content'>
+    <div class="nav-grid">
+      
+        <a href="/" 
+           class="nav-item flat-box"
+           active-action="action-home">
+          <i class="fa-solid fa-house" style="color: #22c55e"></i>
+          <span>首页</span>
+        </a>
+      
+        <a href="/" 
+           class="nav-item flat-box"
+           active-action="action-home">
+          <i class="fa-solid fa-check-square" style="color: #2563eb"></i>
+          <span>笔记</span>
+        </a>
+      
+        <a href="/archives/" 
+           class="nav-item flat-box"
+           active-action="action-archives">
+          <i class="fa-solid fa-archive" style="color: #6366f1"></i>
+          <span>归档</span>
+        </a>
+      
+        <a href="/" 
+           class="nav-item flat-box"
+           active-action="action-home">
+          <i class="fa-solid fa-comments" style="color: #f97316"></i>
+          <span>留言</span>
+        </a>
+      
+        <a href="/" 
+           class="nav-item flat-box"
+           active-action="action-home">
+          <i class="fa-solid fa-link" style="color: #eab308"></i>
+          <span>友链</span>
+        </a>
+      
+        <a href="/about/" 
+           class="nav-item flat-box"
+           active-action="action-about">
+          <i class="fa-solid fa-info-circle" style="color: #ec4899"></i>
+          <span>关于</span>
+        </a>
+      
     </div>
-  </section>
-
-
+  </div>
+</section>
     
   
 
+  
+    
+    
+      
+<section class="widget recent desktop mobile pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-clock fa-fw" aria-hidden="true"></i><span class='name'>最近发布</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="recent-posts">
+      
+        <li>
+          <a href="/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/">
+            <span class="recent-date">2026-06-17</span>
+            <span class="recent-category">未分类</span>
+            <span class="recent-title">电脑C盘炸了</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/2026/06/17/hello-world/">
+            <span class="recent-date">2026-06-17</span>
+            <span class="recent-category">未分类</span>
+            <span class="recent-title">Hello World</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+    
+  
+
+  
+    
+    
+      
+<section class="widget desktop pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>2 篇</div>
+        </div>
+      
+
+      
+
+
+      
+
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          <div id="last-update-show">2026-06-17 日</div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+    
   
 
 
@@ -3045,9 +2989,12 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-          
-            
-          
+              <a href="/atom.xml"
+                class="social fa-solid fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
             
           
         </div>
@@ -3322,6 +3269,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 
+
+
+
+  <script src="https://code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
 
 
 
@@ -3662,7 +3613,8 @@ const performanceMonitor = {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    
+    <script src="/js/geometric-bg.js" data-pjax></script>
+
     <!-- Custom Files bodyEnd end-->
   </body>
 </html>
