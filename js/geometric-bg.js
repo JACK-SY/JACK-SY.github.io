@@ -10,7 +10,7 @@
     opacity: 0.6,
     color: "100,180,255",        // 淡蓝色线条 RGB
     pointColor: "100,180,255",   // 淡蓝色粒子 RGB
-    count: 80,
+    max_count: 128,               // 粒子最大数量限制
     distance: 120,
     mouseDistance: 160,          // 鼠标连线最大距离
     radius: 2,
@@ -57,7 +57,12 @@
 
   function initPoints() {
     points = [];
-    for (var i = 0; i < config.count; i++) {
+    // 根据屏幕大小动态调整粒子数量，但不超过 max_count 限制，最小 30 个
+    var screenArea = width * height;
+    var adjustedCount = Math.floor(screenArea / 15000);
+    var finalCount = Math.min(Math.max(adjustedCount, 30), config.max_count);
+
+    for (var i = 0; i < finalCount; i++) {
       points.push({
         x: Math.random() * width,
         y: Math.random() * height,
