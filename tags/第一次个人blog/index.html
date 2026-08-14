@@ -25,19 +25,21 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="/img/blog/favicon.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/diy-font/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- feed -->
+      <link rel="alternate" href="/atom.xml" title="JACK-YANGの个人博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：第一次个人blog - JACK-YANG# 个人博客</title>
+  <title>标签：第一次个人blog - JACK-YANGの个人博客</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="JACK-YANG# 个人博客 - JACK-YANG - JACK-YANG# 个人博客">
+  <meta desc name="description" content="JACK-YANGの个人博客 - JACK-YANG - JACK-YANGの个人博客">
   <meta property="og:type" content="website">
-<meta property="og:title" content="JACK-YANG# 个人博客">
+<meta property="og:title" content="JACK-YANGの个人博客">
 <meta property="og:url" content="http://example.com/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%AA%E4%BA%BAblog/index.html">
-<meta property="og:site_name" content="JACK-YANG# 个人博客">
+<meta property="og:site_name" content="JACK-YANGの个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:author" content="JACK-YANG">
@@ -708,6 +710,87 @@ button {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper.dock .menu,
+.cover-wrapper.featured .menu,
+.cover-wrapper.focus .menu {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.cover-wrapper.dock .menu .list-h a,
+.cover-wrapper.featured .menu .list-h a,
+.cover-wrapper.focus .menu .list-h a {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  line-height: 24px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-bottom: none;
+  text-align: center;
+  align-content: flex-end;
+  color: rgba(68,68,68,0.7);
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h a,
+  .cover-wrapper.featured .menu .list-h a,
+  .cover-wrapper.focus .menu .list-h a {
+    padding: 12px 8px;
+  }
+}
+.cover-wrapper.dock .menu .list-h a i,
+.cover-wrapper.featured .menu .list-h a i,
+.cover-wrapper.focus .menu .list-h a i {
+  margin: 8px;
+}
+.cover-wrapper.dock .menu .list-h a p,
+.cover-wrapper.featured .menu .list-h a p,
+.cover-wrapper.focus .menu .list-h a p {
+  font-size: 0.875rem;
+}
+.cover-wrapper.dock .menu .list-h a.active,
+.cover-wrapper.featured .menu .list-h a.active,
+.cover-wrapper.focus .menu .list-h a.active {
+  background: var(--color-card);
+  backdrop-filter: none;
+}
+.cover-wrapper.dock .menu .list-h a.active i,
+.cover-wrapper.featured .menu .list-h a.active i,
+.cover-wrapper.focus .menu .list-h a.active i,
+.cover-wrapper.dock .menu .list-h a.active i+p,
+.cover-wrapper.featured .menu .list-h a.active i+p,
+.cover-wrapper.focus .menu .list-h a.active i+p {
+  color: #3dd9b6;
+}
+.cover-wrapper.dock .menu .list-h a.active img+p,
+.cover-wrapper.featured .menu .list-h a.active img+p,
+.cover-wrapper.focus .menu .list-h a.active img+p {
+  color: var(--color-text);
+}
+.cover-wrapper.dock .menu .list-h a:hover,
+.cover-wrapper.featured .menu .list-h a:hover,
+.cover-wrapper.focus .menu .list-h a:hover {
+  background: var(--color-card);
+}
+.cover-wrapper.featured .menu .list-h {
+  margin: -2px;
+}
+.cover-wrapper.featured .menu .list-h a {
+  margin: 2px;
+  background: rgba(255,255,255,0.5);
+}
+@supports (backdrop-filter: blur(20px)) {
+  .cover-wrapper.featured .menu .list-h a {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: saturate(200%) blur(20px);
+  }
 }
 @font-face {
   font-family: 'HYXiaoMaiTiJ';
@@ -1545,6 +1628,107 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+/* 最近发布：简洁卡片式 - 分类徽章 + 标题 + 日期 */
+.widget .recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget .recent-list li {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+.widget .recent-list li a.flat-box {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: var(--color-card);
+  border-left: 3px solid #3dd9b6;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  line-height: 1.4;
+}
+.widget .recent-list li a.flat-box:hover {
+  background: var(--color-site-body);
+  transform: translateX(2px);
+  -webkit-transform: translateX(2px);
+  -khtml-transform: translateX(2px);
+  -moz-transform: translateX(2px);
+  -o-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+}
+.widget .recent-list li a.flat-box i {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.widget .recent-list .recent-category {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 99px;
+  -webkit-border-radius: 99px;
+  background: #3dd9b6;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  line-height: 18px;
+}
+.widget .recent-list .recent-title {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-h4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1.5;
+}
+.widget .recent-list .recent-date {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  font-size: 12px;
+  color: var(--color-meta);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .widget .recent-list li a.flat-box {
+    background: var(--color-card);
+    border-left-color: #3dd9b6;
+  }
+  .widget .recent-list li a.flat-box:hover {
+    background: rgba(255,255,255,0.05);
+  }
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -1716,7 +1900,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   });
 
 })();
-  volantis.debug = "env"; // 调试模式
+  volantis.debug = "false"; // 调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
   /******************** volantis.getFunctionHash ********************************/
 // 简易文本哈希
@@ -2254,9 +2438,9 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 <script>
   volantis.GLOBAL_CONFIG ={
     root: '/',
-    debug: "env",
+    debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1781752072854),
+    lastupdate: new Date(1786705485737),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2303,7 +2487,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 </script>
 
   
-    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANG# 个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"JACK-YANG# 个人博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/第一次个人blog/","name":"第一次个人blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANG# 个人博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"JACK-YANG# 个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"JACK-YANG# 个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"JACK-YANGの个人博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/第一次个人blog/","name":"第一次个人blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
   
   <!-- import head_end begin -->
   <!-- import head_end end -->
@@ -2586,11 +2770,71 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
     
       <!-- see: /layout/_partial/scripts/_ctrl.ejs -->
-      <div id="half" class='cover-wrapper  blank' style="display: ;">
+      <div id="half" class='cover-wrapper  featured' style="display: ;">
         
 
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
+<div class='cover-body'>
+  <div class='top'>
+    
+      <img no-lazy class='logo' src='/%5Bobject%20Object%5D'/>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <i class='fas fa-house fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <i class='fas fa-check-square fa-fw'></i><p>笔记</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <i class='fas fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/comments/"
+              
+              
+              active-action="action-comments">
+              <i class='fas fa-comments fa-fw'></i><p>留言</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              active-action="action-links">
+              <i class='fas fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a href="/about/"
+              
+              
+              active-action="action-about">
+              <i class='fas fa-info-circle fa-fw'></i><p>关于</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
 
         <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
@@ -2621,7 +2865,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2026/06/17/电脑C盘炸了/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANG# 个人博客">
+    <meta itemprop="name" content="JACK-YANGの个人博客">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="name" content="电脑C盘炸了">
@@ -2710,8 +2954,8 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/Logo-NavBar@3x.png' alt='avatar' />
+        <a class='avatar flat-box circle' href='/about/'>
+          <img no-lazy src='/img/blog/avatar.jpg' alt='avatar' />
         </a>
       
     
@@ -2720,7 +2964,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
         
         
         
-          <p><span id="jinrishici-sentence">JACK-YANG# 个人博客</span></p>
+          <p><span id="jinrishici-sentence">JACK-YANGの个人博客</span></p>
           <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
@@ -2800,6 +3044,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             ><div class='name'>杂项</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/" href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/"
+            active-action="action-categoriesE6B58BE8AF95E7AEA1E79086"
+            ><div class='name'>测试管理</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"
             active-action="action-categoriesE997AEE9A298E8A7A3E586B3"
             ><div class='name'>问题解决</div><div class='badge'>(1)</div></a></li>
@@ -2816,63 +3065,54 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     
     
       
-<section class="widget nav desktop mobile pjax">
   
+  <section class="widget grid desktop mobile pjax">
+    
   <header>
     
-      <i class="fa-solid fa-list-ul fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
+      <i class="fa-solid fa-compass fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="nav-grid">
-      
-        <a href="/" 
-           class="nav-item flat-box"
-           active-action="action-home">
-          <i class="fa-solid fa-house" style="color: #22c55e"></i>
-          <span>首页</span>
-        </a>
-      
-        <a href="/" 
-           class="nav-item flat-box"
-           active-action="action-home">
-          <i class="fa-solid fa-check-square" style="color: #2563eb"></i>
-          <span>笔记</span>
-        </a>
-      
-        <a href="/archives/" 
-           class="nav-item flat-box"
-           active-action="action-archives">
-          <i class="fa-solid fa-archive" style="color: #6366f1"></i>
-          <span>归档</span>
-        </a>
-      
-        <a href="/" 
-           class="nav-item flat-box"
-           active-action="action-home">
-          <i class="fa-solid fa-comments" style="color: #f97316"></i>
-          <span>留言</span>
-        </a>
-      
-        <a href="/" 
-           class="nav-item flat-box"
-           active-action="action-home">
-          <i class="fa-solid fa-link" style="color: #eab308"></i>
-          <span>友链</span>
-        </a>
-      
-        <a href="/about/" 
-           class="nav-item flat-box"
-           active-action="action-about">
-          <i class="fa-solid fa-info-circle" style="color: #ec4899"></i>
-          <span>关于</span>
-        </a>
-      
+    <div class='content'>
+      <div class="grid fixed">
+        
+          <a class="flat-box" href="/tags/" title="标签">
+            <i class="fa-solid fa-tags fa-fw" aria-hidden="true" style="color: #8b5cf6"></i>
+            标签
+          </a>
+        
+          <a class="flat-box" href="/categories/" title="分类">
+            <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true" style="color: #0ea5e9"></i>
+            分类
+          </a>
+        
+          <a class="flat-box" href="/archives/" title="归档">
+            <i class="fa-solid fa-archive fa-fw" aria-hidden="true" style="color: #6366f1"></i>
+            归档
+          </a>
+        
+          <a class="flat-box" href="/comments/" title="留言">
+            <i class="fa-solid fa-comments fa-fw" aria-hidden="true" style="color: #f97316"></i>
+            留言
+          </a>
+        
+          <a class="flat-box" href="/links/" title="友链">
+            <i class="fa-solid fa-link fa-fw" aria-hidden="true" style="color: #eab308"></i>
+            友链
+          </a>
+        
+          <a class="flat-box" href="/about/" title="关于">
+            <i class="fa-solid fa-info-circle fa-fw" aria-hidden="true" style="color: #ec4899"></i>
+            关于
+          </a>
+        
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
     
   
 
@@ -2880,8 +3120,9 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     
     
       
-<section class="widget recent desktop mobile pjax">
   
+  <section class="widget recent desktop mobile pjax">
+    
   <header>
     
       <i class="fa-solid fa-clock fa-fw" aria-hidden="true"></i><span class='name'>最近发布</span>
@@ -2889,36 +3130,51 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   </header>
 
 
-  <div class='content'>
-    <ul class="recent-posts">
-      
-        <li>
-          <a href="/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/">
-            <span class="recent-date">2026-06-18</span>
-            <span class="recent-category">问题解决</span>
-            <span class="recent-title">VPN无法联网故障完整总结</span>
-          </a>
-        </li>
-      
-        <li>
-          <a href="/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/">
-            <span class="recent-date">2026-06-17</span>
-            <span class="recent-category">工作</span>
-            <span class="recent-title">电脑C盘炸了</span>
-          </a>
-        </li>
-      
-        <li>
-          <a href="/2026/06/17/hello-world/">
-            <span class="recent-date">2026-06-17</span>
-            <span class="recent-category">杂项</span>
-            <span class="recent-title">Hello World</span>
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-</section>
+    <div class='content'>
+      <ul class="entry recent-list">
+        
+        
+          <li>
+            <a class="flat-box" href="/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/" title="测试规范档案的变更腐烂与本地裁决保护机制">
+              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+              <span class="recent-category">测试管理</span>
+              <span class="recent-title">测试规范档案的变更腐烂与本地裁决保护机制</span>
+              <span class="recent-date">2026-08-14</span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="flat-box" href="/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/" title="VPN无法联网故障完整总结">
+              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+              <span class="recent-category">问题解决</span>
+              <span class="recent-title">VPN无法联网故障完整总结</span>
+              <span class="recent-date">2026-06-18</span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="flat-box" href="/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/" title="电脑C盘炸了">
+              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+              <span class="recent-category">工作</span>
+              <span class="recent-title">电脑C盘炸了</span>
+              <span class="recent-date">2026-06-17</span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="flat-box" href="/2026/06/17/hello-world/" title="Hello World">
+              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+              <span class="recent-category">杂项</span>
+              <span class="recent-title">Hello World</span>
+              <span class="recent-date">2026-06-17</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </section>
+
+
     
   
 
@@ -2940,7 +3196,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>3 篇</div>
+          <div>4 篇</div>
         </div>
       
 
@@ -2959,7 +3215,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2026-06-18 日</div>
+          <div id="last-update-show">2026-08-14 日</div>
         </div>
       
     </div>
@@ -3202,55 +3458,6 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
-    }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function pjax_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  pjax_giscus();
-  volantis.pjax.push(pjax_giscus);
-  volantis.dark.push(dark_giscus);
-</script>
-
-    
 
 
 
@@ -3330,10 +3537,6 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 
-
-
-
-  <script src="https://code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
 
 
 

@@ -3366,154 +3366,34 @@ img.lazyload:not(.placeholder).loaded {
   display: inline-block;
   float: right;
 }
-.widget-last.nav .content,
-.widget.nav .content {
-  padding: 8px 16px;
-}
-.widget-last.nav .content .nav-grid,
-.widget.nav .content .nav-grid {
+.widget-last {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  display: block !important;
 }
-.widget-last.nav .content .nav-grid .nav-item,
-.widget.nav .content .nav-grid .nav-item {
+.widget-last .item {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
   display: -webkit-flex /* NEW - Chrome */;
   display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
   display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  padding: 8px 0;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -khtml-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  font-size: 0.8rem;
 }
-.widget-last.nav .content .nav-grid .nav-item i,
-.widget.nav .content .nav-grid .nav-item i {
-  font-size: 1.5em;
-  margin-bottom: 4px;
-  transition: transform 0.3s ease;
-  -webkit-transition: transform 0.3s ease;
-  -khtml-transition: transform 0.3s ease;
-  -moz-transition: transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  -ms-transition: transform 0.3s ease;
-}
-.widget-last.nav .content .nav-grid .nav-item span,
-.widget.nav .content .nav-grid .nav-item span {
-  font-size: 0.78125rem;
-  color: var(--color-meta);
-}
-.widget-last.nav .content .nav-grid .nav-item:hover,
-.widget.nav .content .nav-grid .nav-item:hover {
-  background: rgba(61,217,182,0.1);
-}
-.widget-last.nav .content .nav-grid .nav-item:hover i,
-.widget.nav .content .nav-grid .nav-item:hover i {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -khtml-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-}
-.widget-last.nav .content .nav-grid .nav-item.active,
-.widget.nav .content .nav-grid .nav-item.active {
-  background: rgba(61,217,182,0.15);
-}
-.widget-last.recent .content,
-.widget.recent .content {
-  padding: 8px 16px;
-}
-.widget-last.recent .content .recent-posts,
-.widget.recent .content .recent-posts {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.widget-last.recent .content .recent-posts li,
-.widget.recent .content .recent-posts li {
-  margin-bottom: 1em;
-}
-.widget-last.recent .content .recent-posts li:last-child,
-.widget.recent .content .recent-posts li:last-child {
-  margin-bottom: 0;
-}
-.widget-last.recent .content .recent-posts li a,
-.widget.recent .content .recent-posts li a {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  padding: 4px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -khtml-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-}
-.widget-last.recent .content .recent-posts li a:hover,
-.widget.recent .content .recent-posts li a:hover {
-  background: rgba(61,217,182,0.1);
-}
-.widget-last.recent .content .recent-posts li a .recent-date,
-.widget.recent .content .recent-posts li a .recent-date {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  font-size: 0.78125rem;
-  color: var(--color-meta);
-  margin-bottom: 2px;
-}
-.widget-last.recent .content .recent-posts li a .recent-category,
-.widget.recent .content .recent-posts li a .recent-category {
+.widget-last .item-title {
+  width: 100%;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block;
-  font-size: 0.78125rem;
-  color: #fff;
-  background: #3dd9b6;
-  padding: 2px 8px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  margin-bottom: 4px;
-  margin-right: 4px;
-}
-.widget-last.recent .content .recent-posts li a .recent-title,
-.widget.recent .content .recent-posts li a .recent-title {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  font-size: 0.875rem;
-  color: var(--color-text);
-  line-height: 1.4;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .widget-sticky {
   position: sticky;
