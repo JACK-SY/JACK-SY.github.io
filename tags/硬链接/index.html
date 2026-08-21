@@ -1888,6 +1888,155 @@ ul.list-v >li>a:hover {
     background: rgba(255,255,255,0.05);
   }
 }
+/* ============================================================
+ * 友情链接卡片样式：固定大小、文字省略、分色展示
+ * 当前规则：默认浅绿色背景，第 2 个卡片（Volantis）浅蓝色背景
+ * ============================================================ */
+.article.l_friends .friends-group .friend-content {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: flex-start;
+}
+.article.l_friends .friends-group .friend-content a.friend-card {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  flex-basis: 220px !important;
+  width: 220px !important;
+  height: 170px !important;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 16px 0 0 0 !important;
+  padding: 0.75rem !important;
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+  background: rgba(34,197,94,0.08) !important;
+  border: 1px solid rgba(34,197,94,0.25) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  color: var(--color-meta) !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  -khtml-justify-content: center !important;
+  -moz-justify-content: center !important;
+  -o-justify-content: center !important;
+  -ms-justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
+/* Volantis 主题卡片使用浅蓝色 */
+}
+.article.l_friends .friends-group .friend-content a.friend-card:nth-child(2) {
+  background: rgba(59,130,246,0.08) !important;
+  border-color: rgba(59,130,246,0.25) !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card:hover .friend-left .avatar {
+  transform: scale(1.15) rotate(8deg) !important;
+  -webkit-transform: scale(1.15) rotate(8deg) !important;
+  -khtml-transform: scale(1.15) rotate(8deg) !important;
+  -moz-transform: scale(1.15) rotate(8deg) !important;
+  -o-transform: scale(1.15) rotate(8deg) !important;
+  -ms-transform: scale(1.15) rotate(8deg) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-left {
+  align-self: center !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-left .avatar {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 0 0.5rem 0 !important;
+  border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  border: 3px solid #fff !important;
+  background: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-right {
+  width: 100% !important;
+  margin: 0 !important;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-right .friend-name {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  padding-top: 4px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  width: 100% !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-right .friend-tags-wrapper {
+  width: 100% !important;
+  margin: 4px 0 0 0 !important;
+  word-break: keep-all !important;
+}
+.article.l_friends .friends-group .friend-content a.friend-card .friend-right .friend-tags-wrapper .tags {
+  font-size: 12px !important;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-right: 4px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  background: none !important;
+  color: var(--color-meta) !important;
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2605,7 +2754,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787284015752),
+    lastupdate: new Date(1787289632825),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
