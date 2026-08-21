@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="http://example.com/2026/06/18/VPN无法联网故障完整总结/"/>
+  <link rel="canonical" href="https://jack-sy.github.io/2026/08/测试规范档案的变更腐烂与本地裁决保护机制/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,26 +28,28 @@
     <link rel="shortcut icon" type='image/x-icon' href="/img/blog/favicon.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="/diy-font/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="JACK-YANGの个人博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>VPN无法联网故障完整总结 - JACK-YANGの个人博客</title>
-  <meta name="keywords" content="问题解决, VPN,null">
-  <meta desc name="description" content="JACK-YANGの个人博客 - JACK-YANG - JACK-YANGの个人博客">
+  <title>测试规范档案的变更腐烂与本地裁决保护机制 - JACK-YANGの个人博客</title>
+  <meta name="keywords" content="测试管理, 测试规范,AI协作,知识库同步,博客,技术,测试管理,AI协作,问题解决">
+  <meta desc name="description" content="解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。 - JACK-YANG - JACK-YANGの个人博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPN无法联网故障完整总结">
-<meta property="og:url" content="http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="测试规范档案的变更腐烂与本地裁决保护机制">
+<meta property="og:url" content="https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="JACK-YANGの个人博客">
-<meta property="og:description" content="故障现象 加速器界面显示已连接，但完全无法访问外网 重装软件、重置 Windows 网络栈、切换全局&#x2F;智能分流、更换 WiFi&#x2F;手机热点均无改善 执行 bcdedit &#x2F;set testsigning on 报错：该值受安全引导策略保护，无法修改或删除 公司同配置电脑软件正常使用，家用电脑稳定复现故障 关闭内存完整性、清理第三方网络过滤驱动、卸载重装 TAP 驱动均无效 BIO">
+<meta property="og:description" content="解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2026-06-18T01:30:29.000Z">
-<meta property="article:modified_time" content="2026-06-18T02:08:46.102Z">
+<meta property="article:published_time" content="2026-08-14T10:50:15.000Z">
+<meta property="article:modified_time" content="2026-08-14T11:04:02.227Z">
 <meta property="article:author" content="JACK-YANG">
-<meta property="article:tag" content="VPN">
+<meta property="article:tag" content="AI协作">
+<meta property="article:tag" content="测试规范">
+<meta property="article:tag" content="知识库同步">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -797,9 +799,161 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 @font-face {
   font-family: 'HYXiaoMaiTiJ';
-  src: url("/diy-font/HYXiaoMaiTiJ.woff2");
+  src: url("/assets/fonts/HYXiaoMaiTiJ.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1633,6 +1787,11 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 /* 最近发布：简洁卡片式 - 分类徽章 + 标题 + 日期 */
 .widget .recent-list {
   list-style: none;
@@ -1738,6 +1897,12 @@ ul.list-v >li>a:hover {
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme")
+      if(userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2445,7 +2610,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787240654782),
+    lastupdate: new Date(1787282884586),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2492,7 +2657,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 </script>
 
   
-    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"JACK-YANGの个人博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/问题解决/","name":"问题解决"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/06/18/VPN无法联网故障完整总结/","name":"VPN无法联网故障完整总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"VPN无法联网故障完整总结","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2026-06-18T01:30:29.000Z","dateModified":"2026-06-18T02:08:46.102Z","articleSection":"问题解决","keywords":"VPN","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","sameAs":["https://github.com/JACK-SY"],"description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jack-sy.github.io/","name":"JACK-YANGの个人博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jack-sy.github.io/categories/测试管理/","name":"测试管理"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jack-sy.github.io/2026/08/测试规范档案的变更腐烂与本地裁决保护机制/","name":"测试规范档案的变更腐烂与本地裁决保护机制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","keywords":"博客,技术,测试管理,AI协作,问题解决","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://jack-sy.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"测试规范档案的变更腐烂与本地裁决保护机制","description":"解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/","wordCount":0,"datePublished":"2026-08-14T10:50:15.000Z","dateModified":"2026-08-14T11:04:02.227Z","articleSection":"测试管理","keywords":"测试规范,AI协作,知识库同步","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
   
   <!-- import head_end begin -->
   <!-- import head_end end -->
@@ -2556,13 +2721,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2590,11 +2755,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2607,11 +2806,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2634,6 +2833,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
                 </a>
                 
               </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
           
@@ -2677,13 +2886,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2711,11 +2920,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2728,11 +2971,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2758,6 +3001,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
           
             
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+            
           </ul>
         </li>
 			</ul>
@@ -2778,7 +3031,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       <div id="half" class='cover-wrapper post featured' style="display: ;">
         
 
-  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://unpkg.com/volantis-static@media/tiles/cover/lighthouse.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2800,11 +3053,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-house fa-fw'></i><p>首页</p>
             </a>
           
-            <a href="/"
+            <a href="/blog/"
               
               
-              active-action="action-home">
-              <i class='fas fa-check-square fa-fw'></i><p>笔记</p>
+              active-action="action-blog">
+              <i class='fas fa-blog fa-fw'></i><p>博客</p>
             </a>
           
             <a href="/archives/"
@@ -2814,11 +3067,18 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-archive fa-fw'></i><p>归档</p>
             </a>
           
-            <a href="/comments/"
+            <a href="/categories/"
               
               
-              active-action="action-comments">
-              <i class='fas fa-comments fa-fw'></i><p>留言</p>
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
             <a href="/links/"
@@ -2852,13 +3112,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/06/18/VPN无法联网故障完整总结/">
+  <link itemprop="mainEntityOfPage" href="https://jack-sy.github.io/2026/08/测试规范档案的变更腐烂与本地裁决保护机制/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="JACK-YANGの个人博客">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="VPN无法联网故障完整总结">
-    <meta itemprop="description" content="">
+    <meta itemprop="name" content="测试规范档案的变更腐烂与本地裁决保护机制">
+    <meta itemprop="description" content="解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。">
   </span>
   
 
@@ -2873,7 +3133,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     
     
       <h1 class="title" itemprop="name headline">
-        VPN无法联网故障完整总结
+        测试规范档案的变更腐烂与本地裁决保护机制
       </h1>
       <div class='new-meta-box'>
         
@@ -2895,10 +3155,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
+    <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/">测试管理</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url"><span itemprop="name">问题解决</span></a>
+        <a href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/" itemprop="url"><span itemprop="name">测试管理</span></a>
       </span>
     
   </div>
@@ -2909,10 +3169,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-06-18T09:30:29+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-08-14T18:50:15+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2026年6月18日</p>
+    <p>发布于：2026年8月14日</p>
   </a>
 </div>
 
@@ -2921,6 +3181,20 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
           
             
 
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="busuanzi_value_page_pv">
+        <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
 
 
           
@@ -2935,84 +3209,276 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="故障现象"><a href="#故障现象" class="headerlink" title="故障现象"></a>故障现象</h2><ul>
-<li>加速器界面显示已连接，但完全无法访问外网</li>
-<li>重装软件、重置 Windows 网络栈、切换全局&#x2F;智能分流、更换 WiFi&#x2F;手机热点均无改善</li>
-<li>执行 <code>bcdedit /set testsigning on</code> 报错：该值受安全引导策略保护，无法修改或删除</li>
-<li>公司同配置电脑软件正常使用，家用电脑稳定复现故障</li>
-<li>关闭内存完整性、清理第三方网络过滤驱动、卸载重装 TAP 驱动均无效</li>
-<li>BIOS 关闭 Secure Boot 后外网访问恢复正常，仅 ping 虚拟网关超时（不影响业务使用）</li>
+    <blockquote>
+<p>面向团队全体成员 | 2026-08-14 | 测试工程师 + Claude</p>
+</blockquote>
+<hr>
+<h2 id="一句话概括"><a href="#一句话概括" class="headerlink" title="一句话概括"></a>一句话概括</h2><p>本文解决两个在 AI 协作测试管理中反复出现的痛点：<strong>规范导航表随文件增删逐渐失效</strong>和<strong>本地PRD有用户确认但知识库还没同步时被覆盖</strong>。对应的两个机制是：<strong>变更协议 + 自检脚本</strong>和<strong>本地裁决标注 + 同步检查矩阵</strong>。</p>
+<hr>
+<h2 id="问题一：静态导航表的变更腐烂"><a href="#问题一：静态导航表的变更腐烂" class="headerlink" title="问题一：静态导航表的变更腐烂"></a>问题一：静态导航表的变更腐烂</h2><h3 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h3><p>项目有 12 份测试规范文档，<code>AGENTS.md</code> 作为 Agent 的唯一入口，用静态表格登记了每份文件的路径、用途、读取时机。问题出在：</p>
+<ul>
+<li>有人<strong>新增</strong>了一份规范文件，忘了在 <code>AGENTS.md</code> 的文件清单表和读取机制表里登记 → Agent 读取时不知道这份文件存在 → 新规范写了等于没写</li>
+<li>有人<strong>删除</strong>了一份规范文件，忘了在 <code>AGENTS.md</code> 里移除路径 → Agent 照着失效路径去找 → 找不到 → 出错或忽略</li>
+<li>有人<strong>改了章节号</strong>（如 §8.7 改为 §8.8），其它文件里交叉引用还写着 §8.7 → 引用断链 → Agent 读到错误的章节</li>
 </ul>
-<hr>
-<h2 id="根本原因"><a href="#根本原因" class="headerlink" title="根本原因"></a>根本原因</h2><h3 id="固件层"><a href="#固件层" class="headerlink" title="固件层"></a>固件层</h3><blockquote>
-<p>家用设备 BIOS 默认开启 Secure Boot（安全启动），固件强制校验内核驱动 WHQL 微软数字签名；<br>Anycast 底层依赖的 TAP 虚拟网卡驱动存在官方 WHQL 签名，但固件底层静默丢弃该驱动所有二层数据包。</p>
-</blockquote>
-<h3 id="系统层限制"><a href="#系统层限制" class="headerlink" title="系统层限制"></a>系统层限制</h3><blockquote>
-<p>Windows 上层操作（网络重置、防火墙配置、重装驱动、关闭内存完整性、F7 临时禁用驱动签名）仅作用于操作系统，无法修改 UEFI 固件拦截规则，所有软件层面修复全部失效。</p>
-</blockquote>
-<h3 id="Ping-超时说明"><a href="#Ping-超时说明" class="headerlink" title="Ping 超时说明"></a>Ping 超时说明</h3><blockquote>
-<p>Secure Boot 关闭后 TCP&#x2F;HTTPS 业务流量正常转发，仅 ping 网关超时是加速器服务端防火墙拦截 ICMP 探测包，属于软件策略限制，不影响上网等常规使用。</p>
-</blockquote>
-<h3 id="环境差异"><a href="#环境差异" class="headerlink" title="环境差异"></a>环境差异</h3><blockquote>
-<p>企业办公电脑 BIOS 统一关闭 Secure Boot，无固件签名拦截，TAP 驱动数据包可正常转发，因此不存在该故障。</p>
-</blockquote>
-<hr>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一：保留-Anycast，BIOS-关闭-Secure-Boot（推荐）"><a href="#方案一：保留-Anycast，BIOS-关闭-Secure-Boot（推荐）" class="headerlink" title="方案一：保留 Anycast，BIOS 关闭 Secure Boot（推荐）"></a>方案一：保留 Anycast，BIOS 关闭 Secure Boot（推荐）</h3><h4 id="第一步：进入-BIOS-关闭安全启动"><a href="#第一步：进入-BIOS-关闭安全启动" class="headerlink" title="第一步：进入 BIOS 关闭安全启动"></a>第一步：进入 BIOS 关闭安全启动</h4><ol>
-<li><code>Win + i</code> → 系统 → 恢复 → 高级启动 → 立即重启</li>
-<li>蓝屏界面：疑难解答 → 高级选项 → UEFI 固件设置 → 重启进入 BIOS</li>
-<li>切换 Security 安全菜单，Secure Boot 设置为 <strong>Disabled</strong></li>
-<li><code>F10</code> 保存 BIOS 配置，自动重启电脑</li>
-</ol>
-<h4 id="第二步：执行底层配置命令（管理员-CMD）"><a href="#第二步：执行底层配置命令（管理员-CMD）" class="headerlink" title="第二步：执行底层配置命令（管理员 CMD）"></a>第二步：执行底层配置命令（管理员 CMD）</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /<span class="built_in">set</span> testsigning on</span><br><span class="line">route -f</span><br><span class="line">netsh winsock reset</span><br><span class="line">netsh int ip reset resetlog.txt</span><br><span class="line">netsh wfp reset</span><br><span class="line"><span class="built_in">ipconfig</span> /release</span><br><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>执行完毕后重启电脑</p>
-</blockquote>
-<h4 id="第三步：清理旧驱动并启动加速器"><a href="#第三步：清理旧驱动并启动加速器" class="headerlink" title="第三步：清理旧驱动并启动加速器"></a>第三步：清理旧驱动并启动加速器</h4><ol>
-<li>设备管理器 → 网络适配器，卸载 <strong>Anycast VPN Tunnel</strong>，勾选删除驱动软件，重启</li>
-<li>右键 Anycast 快捷方式 → 兼容性 → 勾选<strong>以管理员身份运行此程序</strong></li>
-<li>软件切换<strong>全局模式</strong>，连接节点即可正常访问外网</li>
-</ol>
-<h4 id="第四步：恢复系统正常模式（消除测试模式水印）"><a href="#第四步：恢复系统正常模式（消除测试模式水印）" class="headerlink" title="第四步：恢复系统正常模式（消除测试模式水印）"></a>第四步：恢复系统正常模式（消除测试模式水印）</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /<span class="built_in">set</span> testsigning off</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>执行后重启电脑，测试模式水印消失</p>
-</blockquote>
-<h4 id="风险提示"><a href="#风险提示" class="headerlink" title="风险提示"></a>风险提示</h4><ul>
-<li><strong>安全风险</strong>：关闭后固件层开机恶意驱动校验失效，禁止运行破解软件、外挂、未知第三方驱动</li>
-<li><strong>兼容限制</strong>：Valorant、EAC、BattlEye 等反作弊网游强制要求开启 Secure Boot，游戏时需临时进 BIOS 重新打开</li>
-</ul>
-<hr>
-<h3 id="方案二：不修改-BIOS，更换兼容加速器"><a href="#方案二：不修改-BIOS，更换兼容加速器" class="headerlink" title="方案二：不修改 BIOS，更换兼容加速器"></a>方案二：不修改 BIOS，更换兼容加速器</h3><p><strong>核心思路</strong>：更换使用 Wintun 驱动的加速器，Wintun 拥有微软官方 WHQL 数字签名，不受 Secure Boot 签名拦截限制。</p>
-<p><strong>优势</strong>：无需进入 BIOS、无需修改系统底层配置，安装后直接正常使用，无测试模式水印。</p>
-<hr>
-<h2 id="常见误区"><a href="#常见误区" class="headerlink" title="常见误区"></a>常见误区</h2><table>
+<p>这三类问题在文档项目里几乎是必然发生的——文件增删改是常态，但全靠人工记得同步登记表，迟早遗漏。这叫<strong>变更腐烂</strong>：每次变更漏一点，积累下来导航表和实际文件就脱节了。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p><strong>两层防线</strong>：</p>
+<h4 id="第一层：变更协议（AGENTS-md-§规范文件变更协议）"><a href="#第一层：变更协议（AGENTS-md-§规范文件变更协议）" class="headerlink" title="第一层：变更协议（AGENTS.md §规范文件变更协议）"></a>第一层：变更协议（<code>AGENTS.md</code> §规范文件变更协议）</h4><p>在 <code>AGENTS.md</code> 中显式定义文件增删改时必须同步的操作清单：</p>
+<table>
 <thead>
 <tr>
-<th>错误观点</th>
-<th>正确认知</th>
+<th>操作</th>
+<th>必须同步更新</th>
+<th>操作后执行</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>重装软件&#x2F;驱动可以根治故障</td>
-<td>重装仅重置软件文件，无法修改主板 Secure Boot 固件拦截策略，故障会复现</td>
+<td>新增文件</td>
+<td>① AGENTS.md 文件清单表登记路径 ② AGENTS.md 读取机制表添加对应行 ③ 总纲 §2 关联规范速查表</td>
+<td>运行自检脚本</td>
 </tr>
 <tr>
-<td>切换手机热点可以解决问题</td>
-<td>故障根源在本机固件层限制，和外部网络无关，更换网络无改善</td>
+<td>删除文件</td>
+<td>① AGENTS.md 文件清单表移除 ② AGENTS.md 读取机制表移除 ③ 所有引用改为替代或删除</td>
+<td>运行自检脚本</td>
 </tr>
 <tr>
-<td>ping 不通网关代表加速器整体故障</td>
-<td>外网可正常访问即代表隧道、驱动、路由全部正常，ping 超时仅为服务端屏蔽 ICMP</td>
+<td>改章节号</td>
+<td>所有引用该章节号的文件</td>
+<td>运行自检脚本</td>
 </tr>
 <tr>
-<td>重启按 F7 临时禁用驱动签名能彻底修复</td>
-<td>F7 仅放开驱动安装校验权限，固件依旧拦截数据包收发</td>
+<td>改内容不改章节号</td>
+<td>无</td>
+<td>无需操作</td>
+</tr>
+</tbody></table>
+<h4 id="第二层：自检脚本（测试规范档案-spec-health-check-py）"><a href="#第二层：自检脚本（测试规范档案-spec-health-check-py）" class="headerlink" title="第二层：自检脚本（测试规范档案/_spec_health_check.py）"></a>第二层：自检脚本（<code>测试规范档案/_spec_health_check.py</code>）</h4><p>人记不住的，脚本来兜底。3 秒内检测 3 类问题：</p>
+<table>
+<thead>
+<tr>
+<th>检测项</th>
+<th>检测方式</th>
+<th>发现问题时</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>文件清单一致性</strong></td>
+<td>对比实际文件 vs AGENTS.md 登记的路径</td>
+<td>报 ERROR：文件存在未登记 &#x2F; 已登记但文件不存在</td>
+</tr>
+<tr>
+<td><strong>交叉引用有效性</strong></td>
+<td>正则提取所有 <code>《文件名》§章节号</code> 引用，校验目标文件和章节是否存在</td>
+<td>报 ERROR：目标文件不存在 &#x2F; 章节号断链</td>
+</tr>
+<tr>
+<td><strong>文件计数</strong></td>
+<td>对比 AGENTS.md 声明的文件数 vs 实际文件数</td>
+<td>报 WARNING：数量不一致</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用法</span></span><br><span class="line">python 测试规范档案/_spec_health_check.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出示例</span></span><br><span class="line">[PASS] 全部通过，无问题发现。</span><br><span class="line">   实际文件数: 12</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
+<li>新增文件忘了登记 → 脚本报 <code>FILE_NOT_REGISTERED</code> → 补登记后再跑 → PASS</li>
+<li>删除文件忘了移除 → 脚本报 <code>FILE_NOT_FOUND</code> → 移除后再跑 → PASS</li>
+<li>改了章节号没改引用 → 脚本报 <code>REF_SECTION_BROKEN</code> → 修引用后再跑 → PASS</li>
+<li>正常情况下，每次改完规范文件跑一次脚本，3 秒出报告，不依赖人记</li>
+</ul>
+<hr>
+<h2 id="问题二：本地PRD与知识库的优先级冲突"><a href="#问题二：本地PRD与知识库的优先级冲突" class="headerlink" title="问题二：本地PRD与知识库的优先级冲突"></a>问题二：本地PRD与知识库的优先级冲突</h2><h3 id="痛点-1"><a href="#痛点-1" class="headerlink" title="痛点"></a>痛点</h3><p>项目的需求权威来源是知识库（<code>项目概览/model-ops-knowledge/</code>），本地PRD是测试设计用的缓存。同步规则是”以知识库为准”。但实际工作中反复出现以下场景：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+<th>旧规则的结果</th>
+<th>应该的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用户质询后修正了知识库的错误</td>
+<td>用户指出”供应商就是渠道”，知识库写的是”跨层级”，本地改为”同层级”</td>
+<td>知识库同步时自动覆盖本地 → 用户确认的修正被冲掉</td>
+<td>保护本地，知识库后续同步</td>
+</tr>
+<tr>
+<td>测试视角筛除了知识库的验证点</td>
+<td>知识库有”迁移脚本不含ALTER TABLE”等运维类验收，测试判定不该测，用例骨架中删了</td>
+<td>知识库同步时恢复这些验收 → 测试视角整改白做了</td>
+<td>保护本地筛除结果</td>
+</tr>
+<tr>
+<td>知识库同步只改了一半</td>
+<td>v3.0 知识库同步回退了 §8.1.4 的”跨层级”，但 §8.1.5&#x2F;§8.1.7 的”同层级”没改 → 同一文件两种口径并存</td>
+<td>无检测机制 → 不一致持续存在</td>
+<td>冲突标记待人工裁决</td>
+</tr>
+</tbody></table>
+<p><strong>核心矛盾</strong>：知识库是权威来源没错，但”知识库永远最新”这个假设不成立——知识库也会滞后、也会过期、也会只同步一半。</p>
+<h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p><strong>本地裁决标注 + 同步检查矩阵</strong>：</p>
+<h4 id="判定标准（三个条件缺一不可）"><a href="#判定标准（三个条件缺一不可）" class="headerlink" title="判定标准（三个条件缺一不可）"></a>判定标准（三个条件缺一不可）</h4><table>
+<thead>
+<tr>
+<th>条件</th>
+<th>说明</th>
+<th>不满足时</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>用户确认</strong></td>
+<td>质询结论、直接修正、补充确认——Agent自行推断的不算</td>
+<td>不构成裁决，正常按知识库同步</td>
+</tr>
+<tr>
+<td><strong>与知识库有差异</strong></td>
+<td>内容、范围、口径上和知识库现存版本不一致</td>
+<td>无差异则无需保护</td>
+</tr>
+<tr>
+<td><strong>方向是本地领先</strong></td>
+<td>本地改了，知识库还没赶上；而非知识库改了、本地要追</td>
+<td>方向是知识库→本地时，正常同步</td>
+</tr>
+</tbody></table>
+<h4 id="同步检查矩阵"><a href="#同步检查矩阵" class="headerlink" title="同步检查矩阵"></a>同步检查矩阵</h4><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>本地 vs 知识库</th>
+<th>有标注</th>
+<th>处理方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>知识库领先</td>
+<td>本地 &lt; 知识库</td>
+<td>无</td>
+<td>✅ 正常同步（知识库→本地）</td>
+</tr>
+<tr>
+<td>知识库领先</td>
+<td>本地 &lt; 知识库</td>
+<td>有</td>
+<td>⛔ 暂停同步，输出差异清单，标记冲突待人工裁决</td>
+</tr>
+<tr>
+<td>本地领先</td>
+<td>本地 ≥ 知识库</td>
+<td>有</td>
+<td>✅ 以本地为准，知识库后续同步</td>
+</tr>
+<tr>
+<td>双方都有变更</td>
+<td>本地 ≥ 知识库</td>
+<td>有</td>
+<td>⛔ 暂停同步，人工确认后决定方向</td>
+</tr>
+<tr>
+<td>无差异</td>
+<td>本地 &#x3D; 知识库</td>
+<td>—</td>
+<td>无操作</td>
+</tr>
+</tbody></table>
+<h4 id="标注格式"><a href="#标注格式" class="headerlink" title="标注格式"></a>标注格式</h4><p>在PRD分拆文件的受保护章节末尾追加引用块：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; <span class="strong">**本地裁决**</span>：v&#123;版本号&#125;（&#123;日期&#125;）&#123;裁决摘要&#125;。</span></span><br><span class="line"><span class="quote">&gt; &#123;差异说明：与知识库 v&#123;KB版本&#125; 在&#123;具体章节&#125;存在差异&#125;。</span></span><br><span class="line"><span class="quote">&gt; <span class="strong">**以本地为准**</span>。知识库需后续同步。</span></span><br><span class="line"><span class="quote">&gt; 裁决依据：&#123;用户确认/质询结论/ADR编号&#125;，见版本更新记录 v&#123;版本号&#125;。</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="实际案例：F1-互斥校验"><a href="#实际案例：F1-互斥校验" class="headerlink" title="实际案例：F1 互斥校验"></a>实际案例：F1 互斥校验</h4><p>Sprint5 F1（responses入站协议兼容转换）中，用户确认”供应商就是渠道”，互斥为同层级而非知识库的跨层级。v3.0 知识库同步只回退了 §8.1.4，§8.1.5&#x2F;§8.1.7 未同步回退，导致同一文件两种口径并存。</p>
+<p>修复后：</p>
+<ul>
+<li>§8.1.4&#x2F;§8.1.5&#x2F;§8.1.7 全部统一为”同层级”</li>
+<li>§8.1.7 末尾追加本地裁决标注</li>
+<li>版本更新记录追加 v3.2</li>
+</ul>
+<p>以后知识库再同步 F1 互斥内容时，检查到本地有裁决标注 → 标记冲突 → 不自动覆盖 → 输出差异清单人工裁决。</p>
+<h3 id="涉及的文件"><a href="#涉及的文件" class="headerlink" title="涉及的文件"></a>涉及的文件</h3><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>改动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>AGENTS.md</code></td>
+<td>需求同步节新增「本地裁决保护」子节</td>
+</tr>
+<tr>
+<td><code>测试规范档案/流程控制/需求变更同步规范.md</code></td>
+<td>新增 §3.4（判定标准、同步检查矩阵、标注格式、典型场景、不触发场景）</td>
+</tr>
+<tr>
+<td><code>测试规范档案/流程控制/需求文档生成规范.md</code></td>
+<td>§4.5 新增本地裁决标注规范</td>
+</tr>
+<tr>
+<td><code>需求文档/Sprint5_需求文档_分拆/01_F1_*.md</code></td>
+<td>§8.1.7 末尾追加本地裁决标注实例</td>
 </tr>
 </tbody></table>
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本次故障的根本原因是 <strong>BIOS Secure Boot 固件层签名校验</strong>，属于硬件层面的限制，所有软件层面的修复手段均无效。解决方案有两种：一是关闭 BIOS 中的 Secure Boot；二是更换使用 Wintun 驱动的加速器。</p>
-<p><strong>建议</strong>：如果不是频繁使用需要 TAP 驱动的特定加速器，直接更换兼容加速器是最省事的方案。</p>
+<h2 id="速查表：两个机制一览"><a href="#速查表：两个机制一览" class="headerlink" title="速查表：两个机制一览"></a>速查表：两个机制一览</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>变更腐烂</th>
+<th>本地裁决冲突</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>痛点</strong></td>
+<td>文件增删改后导航表&#x2F;引用失效</td>
+<td>本地用户确认的修改被知识库同步覆盖</td>
+</tr>
+<tr>
+<td><strong>触发条件</strong></td>
+<td>新增&#x2F;删除文件、改章节号</td>
+<td>用户确认 + 与知识库有差异 + 方向是本地领先</td>
+</tr>
+<tr>
+<td><strong>机制名称</strong></td>
+<td>变更协议 + 自检脚本</td>
+<td>本地裁决标注 + 同步检查矩阵</td>
+</tr>
+<tr>
+<td><strong>防第一道</strong></td>
+<td>AGENTS.md 变更协议（人工同步清单）</td>
+<td>同步检查矩阵（5 种场景的判定逻辑）</td>
+</tr>
+<tr>
+<td><strong>兜第二道</strong></td>
+<td><code>_spec_health_check.py</code> 自动检测</td>
+<td>PRD 文件中引用块标注</td>
+</tr>
+<tr>
+<td><strong>日常操作</strong></td>
+<td>改完规范文件跑一次脚本（3秒）</td>
+<td>同步知识库时检查有无本地裁决标注</td>
+</tr>
+<tr>
+<td><strong>见哪里</strong></td>
+<td>AGENTS.md §规范文件变更协议</td>
+<td>需求变更同步规范 §3.4</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="版本更新记录"><a href="#版本更新记录" class="headerlink" title="版本更新记录"></a>版本更新记录</h2><table>
+<thead>
+<tr>
+<th>版本</th>
+<th>日期</th>
+<th>修改人</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v1.0</td>
+<td>2026-08-14</td>
+<td>测试工程师 + Claude</td>
+<td>初始版本：总结规范导航表变更腐烂（变更协议+自检脚本）与本地PRD裁决保护（标注+同步检查矩阵）两个机制</td>
+</tr>
+</tbody></table>
 
   </div>
   
@@ -3024,6 +3490,23 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
        <!-- 相关文章 -->
       
       <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://jack-sy.github.io/2026/08/测试规范档案的变更腐烂与本地裁决保护机制/">https://jack-sy.github.io/2026/08/测试规范档案的变更腐烂与本地裁决保护机制/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
       
       <!-- 打赏组件 -->
       
@@ -3037,12 +3520,30 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-06-18T10:08:46+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-14T19:04:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2026年6月18日</p>
+    <p>更新于：2026年8月14日</p>
   </a>
 </div>
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.2k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：7 分钟</p>
+    </a>
+  </div>
+
 
         
       
@@ -3051,8 +3552,8 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/VPN/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>VPN</p></a></div>
-  <span hidden itemprop="keywords">VPN</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>测试规范</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI%E5%8D%8F%E4%BD%9C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI协作</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93%E5%90%8C%E6%AD%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>知识库同步</p></a></div>
+  <span hidden itemprop="keywords">测试规范 AI协作 知识库同步</span>
   
 
 
@@ -3066,7 +3567,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/&title=VPN无法联网故障完整总结 - JACK-YANGの个人博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/&title=测试规范档案的变更腐烂与本地裁决保护机制 - JACK-YANGの个人博客&summary="
           
           >
           
@@ -3078,7 +3579,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/&title=VPN无法联网故障完整总结 - JACK-YANGの个人博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/&title=测试规范档案的变更腐烂与本地裁决保护机制 - JACK-YANGの个人博客&summary="
           
           >
           
@@ -3090,7 +3591,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/&title=VPN无法联网故障完整总结 - JACK-YANGの个人博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jack-sy.github.io/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/&title=测试规范档案的变更腐烂与本地裁决保护机制 - JACK-YANGの个人博客&summary="
           
           >
           
@@ -3119,17 +3620,18 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
     <div class="prev-next">
       
-        <a class='prev' href='/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>测试规范档案的变更腐烂与本地裁决保护机制</p>
-          <p class='content'>解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。</p>
+        <a class='prev' href='/2026/08/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案</p>
+          <p class='content'>在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。</p>
         </a>
       
       
-        <a class='next' href='/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/'>
-          <p class='title'>电脑C盘炸了<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>早上过来一看天塌了，C盘直接飘红报警，让AI帮我查了下原因，是workbuddy这小子看的坏事我去路径下一看，这小子下了一堆压缩包，不知道干啥坏事呢一查总数，豁！ 这能不炸
-
-</p>
+        <a class='next' href='/2026/06/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/'>
+          <p class='title'>VPN无法联网故障完整总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>故障现象
+加速器界面显示已连接，但完全无法访问外网
+重装软件、重置 Windows 网络栈、切换全局&#x2F;智能分流、更换 WiFi&#x2F;手机热点均无改善
+执行 bcdedit /se...</p>
         </a>
       
     </div>
@@ -3145,7 +3647,18 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
   
 
-  
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
 
 
 
@@ -3179,7 +3692,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-text">故障现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B9%E6%9C%AC%E5%8E%9F%E5%9B%A0"><span class="toc-text">根本原因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BA%E4%BB%B6%E5%B1%82"><span class="toc-text">固件层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B1%82%E9%99%90%E5%88%B6"><span class="toc-text">系统层限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ping-%E8%B6%85%E6%97%B6%E8%AF%B4%E6%98%8E"><span class="toc-text">Ping 超时说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%B7%AE%E5%BC%82"><span class="toc-text">环境差异</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E4%BF%9D%E7%95%99-Anycast%EF%BC%8CBIOS-%E5%85%B3%E9%97%AD-Secure-Boot%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-text">方案一：保留 Anycast，BIOS 关闭 Secure Boot（推荐）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%BF%9B%E5%85%A5-BIOS-%E5%85%B3%E9%97%AD%E5%AE%89%E5%85%A8%E5%90%AF%E5%8A%A8"><span class="toc-text">第一步：进入 BIOS 关闭安全启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%89%A7%E8%A1%8C%E5%BA%95%E5%B1%82%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%EF%BC%88%E7%AE%A1%E7%90%86%E5%91%98-CMD%EF%BC%89"><span class="toc-text">第二步：执行底层配置命令（管理员 CMD）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%B8%85%E7%90%86%E6%97%A7%E9%A9%B1%E5%8A%A8%E5%B9%B6%E5%90%AF%E5%8A%A8%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="toc-text">第三步：清理旧驱动并启动加速器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E6%81%A2%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%AD%A3%E5%B8%B8%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%B6%88%E9%99%A4%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%BC%8F%E6%B0%B4%E5%8D%B0%EF%BC%89"><span class="toc-text">第四步：恢复系统正常模式（消除测试模式水印）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA"><span class="toc-text">风险提示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9A%E4%B8%8D%E4%BF%AE%E6%94%B9-BIOS%EF%BC%8C%E6%9B%B4%E6%8D%A2%E5%85%BC%E5%AE%B9%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="toc-text">方案二：不修改 BIOS，更换兼容加速器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA"><span class="toc-text">常见误区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%A6%82%E6%8B%AC"><span class="toc-text">一句话概括</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80%EF%BC%9A%E9%9D%99%E6%80%81%E5%AF%BC%E8%88%AA%E8%A1%A8%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82"><span class="toc-text">问题一：静态导航表的变更腐烂</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%97%9B%E7%82%B9"><span class="toc-text">痛点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%B1%82%EF%BC%9A%E5%8F%98%E6%9B%B4%E5%8D%8F%E8%AE%AE%EF%BC%88AGENTS-md-%C2%A7%E8%A7%84%E8%8C%83%E6%96%87%E4%BB%B6%E5%8F%98%E6%9B%B4%E5%8D%8F%E8%AE%AE%EF%BC%89"><span class="toc-text">第一层：变更协议（AGENTS.md §规范文件变更协议）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%B1%82%EF%BC%9A%E8%87%AA%E6%A3%80%E8%84%9A%E6%9C%AC%EF%BC%88%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88-spec-health-check-py%EF%BC%89"><span class="toc-text">第二层：自检脚本（测试规范档案&#x2F;_spec_health_check.py）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C%EF%BC%9A%E6%9C%AC%E5%9C%B0PRD%E4%B8%8E%E7%9F%A5%E8%AF%86%E5%BA%93%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E5%86%B2%E7%AA%81"><span class="toc-text">问题二：本地PRD与知识库的优先级冲突</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%97%9B%E7%82%B9-1"><span class="toc-text">痛点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1"><span class="toc-text">解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E5%AE%9A%E6%A0%87%E5%87%86%EF%BC%88%E4%B8%89%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%BC%BA%E4%B8%80%E4%B8%8D%E5%8F%AF%EF%BC%89"><span class="toc-text">判定标准（三个条件缺一不可）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%A3%80%E6%9F%A5%E7%9F%A9%E9%98%B5"><span class="toc-text">同步检查矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E6%B3%A8%E6%A0%BC%E5%BC%8F"><span class="toc-text">标注格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E6%A1%88%E4%BE%8B%EF%BC%9AF1-%E4%BA%92%E6%96%A5%E6%A0%A1%E9%AA%8C"><span class="toc-text">实际案例：F1 互斥校验</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%89%E5%8F%8A%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">涉及的文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9F%E6%9F%A5%E8%A1%A8%EF%BC%9A%E4%B8%A4%E4%B8%AA%E6%9C%BA%E5%88%B6%E4%B8%80%E8%A7%88"><span class="toc-text">速查表：两个机制一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95"><span class="toc-text">版本更新记录</span></a></li></ol>
     </div>
   </section>
 
@@ -3292,6 +3805,33 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               </a>
             
           
+            
+              <a href="https://github.com/JACK-SY"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://space.bilibili.com/"
+                class="social fab fa-bilibili flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="mailto:jack@yang.com"
+                class="social fa-solid fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
         </div>
       
     
@@ -3305,7 +3845,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.4" target="_blank" class="codename">Volantis</a>
-        作为主题
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
       
     
       
@@ -3353,6 +3896,122 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+volantis.pjax.push(bindToggleButton);
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
 
 
 
@@ -3432,13 +4091,87 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
 
 
 
 
 
 
+      <script>
+  volantis.layoutHelper("comments",`<div id="utterances"></div>`)
+  volantis.utterances={}
+  volantis.utterances.ThemeLight='github-light';
+  volantis.utterances.ThemeDark='github-dark';
+  volantis.utterances.Theme=volantis.utterances.ThemeLight;
+  function pjax_utterances(){
+    if(!document.getElementById("utterances"))return;
+    
+      if(volantis.dark.mode=="dark"){
+        volantis.utterances.Theme=volantis.utterances.ThemeDark;
+      }else{
+        volantis.utterances.Theme=volantis.utterances.ThemeLight;
+      }
+    
+    setTimeout(function() {
+      var checkUtterances = setInterval(function () {
+        var HEAD = document.getElementById("utterances");
+        if (!HEAD) return
+        clearInterval(checkUtterances)
+        try {
+          document.getElementById("utterances").innerHTML="";
+        } catch (error) {}
+        var script = document.createElement('script');
+        script.setAttribute('src','https://utteranc.es/client.js');
+        script.setAttribute('repo','JACK-SY/JACK-SY.github.io');
+        let issuenumber = '';
+        if (issuenumber) {
+          script.setAttribute('issue-number', issuenumber);
+        } else {
+          script.setAttribute('issue-term', 'pathname');
+        }
+        script.setAttribute('theme', volantis.utterances.Theme );
+        script.setAttribute('label','✨💬✨');
+        script.setAttribute('crossorigin', "anonymous");
+        HEAD.appendChild(script);
+      }, 200)
+    });
+  }
+  pjax_utterances();
+  volantis.pjax.push(pjax_utterances);
+  volantis.dark.push(pjax_utterances);
+</script>
 
+    
+
+
+
+
+  <script defer src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js" data-pjax></script>
 
 
 <!-- optional -->
@@ -3855,7 +4588,7 @@ const performanceMonitor = {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script src="/js/geometric-bg.js" data-pjax></script>
+    <script src="/assets/js/geometric-bg.js" data-pjax></script>
 
     <!-- Custom Files bodyEnd end-->
   </body>

@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.4">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow, max-image-preview:large">
-  <link rel="canonical" href="http://example.com/"/>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://jack-sy.github.io/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,21 +28,26 @@
     <link rel="shortcut icon" type='image/x-icon' href="/img/blog/favicon.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="/diy-font/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="JACK-YANGの个人博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>JACK-YANGの个人博客</title>
-  <meta name="keywords" content="">
-  <meta desc name="description" content="JACK-YANGの个人博客 - JACK-YANG - JACK-YANGの个人博客">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JACK-YANGの个人博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <title>羊村导航 - JACK-YANGの个人博客</title>
+  <meta name="keywords" content="博客,技术,测试管理,AI协作,问题解决">
+  <meta desc name="description" content="记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。 - JACK-YANG - JACK-YANGの个人博客">
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="羊村导航">
+<meta property="og:url" content="https://jack-sy.github.io/index.html">
 <meta property="og:site_name" content="JACK-YANGの个人博客">
+<meta property="og:description" content="羊村日记         正在加载一言...                              你好              00:00:00       ----&#x2F;--&#x2F;--        天气加载中...                                必应">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-08-21T02:57:19.255Z">
+<meta property="article:modified_time" content="2026-08-21T02:27:14.471Z">
 <meta property="article:author" content="JACK-YANG">
+<meta property="article:tag" content="博客,技术,测试管理,AI协作,问题解决">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -792,9 +797,161 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 @font-face {
   font-family: 'HYXiaoMaiTiJ';
-  src: url("/diy-font/HYXiaoMaiTiJ.woff2");
+  src: url("/assets/fonts/HYXiaoMaiTiJ.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1628,6 +1785,11 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 /* 最近发布：简洁卡片式 - 分类徽章 + 标题 + 日期 */
 .widget .recent-list {
   list-style: none;
@@ -1733,6 +1895,12 @@ ul.list-v >li>a:hover {
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme")
+      if(userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2440,7 +2608,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787240654782),
+    lastupdate: new Date(1787282884586),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2487,7 +2655,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 </script>
 
   
-    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"JACK-YANGの个人博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","sameAs":["https://github.com/JACK-SY"],"description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jack-sy.github.io/","name":"JACK-YANGの个人博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","keywords":"博客,技术,测试管理,AI协作,问题解决","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://jack-sy.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"羊村导航","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jack-sy.github.io/index.html"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jack-sy.github.io/index.html","wordCount":0,"datePublished":"2026-08-21T02:57:19.255Z","dateModified":"2026-08-21T02:27:14.471Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
   
   <!-- import head_end begin -->
   <!-- import head_end end -->
@@ -2501,15 +2669,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
-        
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
         
       </ul>
     </div>
@@ -2551,13 +2717,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2585,11 +2751,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2602,11 +2802,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2629,6 +2829,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
                 </a>
                 
               </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
           
@@ -2672,13 +2882,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2706,11 +2916,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2723,11 +2967,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2753,6 +2997,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
           
             
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+            
           </ul>
         </li>
 			</ul>
@@ -2770,7 +3024,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
     
       <!-- see: /layout/_partial/scripts/_ctrl.ejs -->
-      <div id="full" class='cover-wrapper  featured' style="display: ;">
+      <div id="none" class='cover-wrapper page featured' style="display: none;">
         
 
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
@@ -2795,11 +3049,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-house fa-fw'></i><p>首页</p>
             </a>
           
-            <a href="/"
+            <a href="/blog/"
               
               
-              active-action="action-home">
-              <i class='fas fa-check-square fa-fw'></i><p>笔记</p>
+              active-action="action-blog">
+              <i class='fas fa-blog fa-fw'></i><p>博客</p>
             </a>
           
             <a href="/archives/"
@@ -2809,11 +3063,18 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-archive fa-fw'></i><p>归档</p>
             </a>
           
-            <a href="/comments/"
+            <a href="/categories/"
               
               
-              active-action="action-comments">
-              <i class='fas fa-comments fa-fw'></i><p>留言</p>
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
             <a href="/links/"
@@ -2836,7 +3097,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   </div>
 </div>
 
-        <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
     
   
@@ -2845,694 +3106,1269 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/08/20/Git拉取后硬链接自动修复方案/">
+<div id="l_main" class=' no_sidebar'>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://jack-sy.github.io/index.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="JACK-YANGの个人博客">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案">
-    <meta itemprop="description" content="在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。">
+    <meta itemprop="name" content="羊村导航">
+    <meta itemprop="description" content="记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/"  itemprop="url">
-        Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。</p>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title" itemprop="name headline">
+        羊村导航
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="JACK-YANG">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2026-08-20T23:37:42+08:00">2026-08-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url"><span itemprop="name">问题解决</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow" alt="author">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">JACK-YANG</p>
+  </a>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/08/14/测试规范档案的变更腐烂与本地裁决保护机制/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANGの个人博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="测试规范档案的变更腐烂与本地裁决保护机制">
-    <meta itemprop="description" content="解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/"  itemprop="url">
-        测试规范档案的变更腐烂与本地裁决保护机制
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="JACK-YANG">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2026-08-14T18:50:15+08:00">2026-08-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/">测试管理</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/" itemprop="url"><span itemprop="name">测试管理</span></a>
-            </span>
           
         
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+          
+            
 
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-08-21T10:57:19+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2026年8月21日</p>
+  </a>
 </div>
 
-          </div>
+          
         
-      
+          
+            
+
+
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/06/18/VPN无法联网故障完整总结/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANGの个人博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="VPN无法联网故障完整总结">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/"  itemprop="url">
-        VPN无法联网故障完整总结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        故障现象
-加速器界面显示已连接，但完全无法访问外网
-重装软件、重置 Windows 网络栈、切换全局&#x2F;智能分流、更换 WiFi&#x2F;手机热点均无改善
-执行 bcdedit /set testsigning on 报错：该值受安全引导策略保护，无法修改或删除
-公司同配置电脑软件正常使用，家用电脑稳定复现故障
-关闭内存完整性、清理第三方网络过滤驱动、卸载重装 TAP 驱动均无效
-...
-      
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="JACK-YANG">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2026-06-18T09:30:29+08:00">2026-06-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url"><span itemprop="name">问题解决</span></a>
-            </span>
-          
-        
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    
+<!-- 网址导航首页：基于 Volantis page 布局内嵌自定义 HTML/JS -->
+<div class="nav-home">
+  <!-- 顶部站点信息区 -->
+  <header class="nav-hero">
+    <div class="nav-hero-inner">
+      <div class="nav-avatar">
+        <img src="/img/blog/avatar.jpg" class="lazyload" data-srcset="/img/blog/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="JACK-YANG" loading="lazy">
       </div>
-      
-        <div>
-          <a class='readmore' href='/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/06/17/电脑C盘炸了/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANGの个人博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="电脑C盘炸了">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/"  itemprop="url">
-        电脑C盘炸了
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        早上过来一看天塌了，C盘直接飘红报警，让AI帮我查了下原因，是workbuddy这小子看的坏事我去路径下一看，这小子下了一堆压缩包，不知道干啥坏事呢一查总数，豁！ 这能不炸
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="JACK-YANG">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2026-06-17T09:47:29+08:00">2026-06-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url"><span itemprop="name">工作</span></a>
-            </span>
-          
-        
+      <div class="nav-brand">
+        <h1 class="nav-site-title">羊村日记</h1>
+        <p class="nav-site-motto" id="hitokoto">正在加载一言...</p>
       </div>
-      
-        <div>
-          <a class='readmore' href='/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
     </div>
-  
 
-</div>
+    <!-- 时间、日期、天气 -->
+    <div class="nav-meta-bar">
+      <span class="nav-greeting" id="greeting">你好</span>
+      <span class="nav-divider"></span>
+      <span class="nav-clock" id="clock">00:00:00</span>
+      <span class="nav-date" id="date">----/--/--</span>
+      <span class="nav-weather" id="weather" title="点击刷新天气"><i class="fa-solid fa-cloud"></i> <span>天气加载中...</span></span>
+    </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/06/17/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANGの个人博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="Hello World">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2026/06/17/hello-world/"  itemprop="url">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="JACK-YANG">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2026-06-17T09:27:46+08:00">2026-06-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E9%A1%B9/" itemprop="url"><span itemprop="name">杂项</span></a>
-            </span>
-          
-        
+    <!-- 搜索引擎 -->
+    <div class="nav-search-box">
+      <div class="nav-engine-tabs" id="engine-tabs">
+        <button class="active" data-engine="bing" data-url="https://cn.bing.com/search?q=">必应</button>
+        <button data-engine="google" data-url="https://www.google.com/search?q=">Google</button>
+        <button data-engine="baidu" data-url="https://www.baidu.com/s?wd=">百度</button>
       </div>
-      
-        <div>
-          <a class='readmore' href='/2026/06/17/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
+      <div class="nav-search-input-wrap">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="nav-search" placeholder="搜索导航站点，或按回车使用上方搜索引擎..." autocomplete="off">
+        <button class="nav-search-btn" id="search-btn">搜索</button>
+      </div>
     </div>
-  
+  </header>
 
-</div>
-
-          </div>
-        
-      
-    
+  <!-- 快捷入口 -->
+  <section class="nav-section nav-quick">
+    <h2 class="nav-section-title"><i class="fa-solid fa-bolt"></i> 快捷入口</h2>
+    <div class="nav-grid" id="nav-quick-grid"></div>
   </section>
+
+  <!-- 我的博客 -->
+  <section class="nav-section nav-blog">
+    <h2 class="nav-section-title"><i class="fa-solid fa-blog"></i> 我的博客</h2>
+    <div class="nav-grid" id="nav-blog-grid"></div>
+  </section>
+
+  <!-- 分类锚点 -->
+  <nav class="nav-anchors" id="nav-anchors" aria-label="分类导航"></nav>
+
+  <!-- 分类导航区 -->
+  <div id="nav-categories"></div>
+
+  <!-- 番茄钟小组件 -->
+  <section class="nav-section nav-pomodoro">
+    <h2 class="nav-section-title"><i class="fa-solid fa-stopwatch"></i> 番茄钟</h2>
+    <div class="pomodoro-card">
+      <div class="pomodoro-time" id="pomodoro-time">25:00</div>
+      <div class="pomodoro-status" id="pomodoro-status">准备开始专注</div>
+      <div class="pomodoro-actions">
+        <button id="pomodoro-start"><i class="fa-solid fa-play"></i> 开始</button>
+        <button id="pomodoro-pause" disabled><i class="fa-solid fa-pause"></i> 暂停</button>
+        <button id="pomodoro-reset"><i class="fa-solid fa-rotate-right"></i> 重置</button>
+      </div>
+      <div class="pomodoro-modes">
+        <button class="active" data-min="25">专注 25 分钟</button>
+        <button data-min="5">休息 5 分钟</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 无结果提示 -->
+  <div class="nav-empty hidden" id="nav-empty">
+    <i class="fa-solid fa-wind"></i>
+    <p>没有找到匹配的站点或分类</p>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="nav-footer">
+    <div class="nav-footer-social" id="nav-footer-social"></div>
+    <p class="nav-footer-info">
+      <span>JACK-YANG · 羊村日记</span>
+      <span class="nav-divider"></span>
+      <span id="site-runtime">已运行 0 天</span>
+      <span class="nav-divider"></span>
+      <span>© <span id="site-year">2026</span></span>
+    </p>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="nav-backtop" id="nav-backtop" title="返回顶部" aria-label="返回顶部">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+<style>
+  /* 导航首页容器 */
+  .nav-home {
+    --nav-radius: 16px;
+    --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --nav-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+
+  /* 顶部站点信息区 */
+  .nav-hero {
+    padding: 40px 24px 32px;
+    margin-bottom: 32px;
+    border-radius: var(--nav-radius);
+    background: linear-gradient(135deg, var(--color-card) 0%, var(--color-site-body) 100%);
+    box-shadow: var(--nav-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(61, 217, 182, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .nav-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-avatar img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-theme);
+    box-shadow: 0 4px 16px rgba(61, 217, 182, 0.25);
+  }
+
+  .nav-brand {
+    text-align: left;
+  }
+
+  .nav-site-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--color-h1);
+    letter-spacing: 1px;
+  }
+
+  .nav-site-motto {
+    font-size: 0.9375rem;
+    color: var(--color-meta);
+    margin: 0;
+    max-width: 360px;
+    min-height: 1.5em;
+  }
+
+  /* 元信息栏 */
+  .nav-meta-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 14px;
+    background: var(--color-block);
+  }
+
+  .nav-greeting {
+    color: var(--color-theme);
+    font-weight: 600;
+  }
+
+  .nav-clock {
+    font-family: 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: 600;
+    color: var(--color-h3);
+  }
+
+  .nav-date {
+    color: var(--color-meta);
+  }
+
+  .nav-weather {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-meta);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .nav-weather:hover {
+    color: var(--color-theme);
+  }
+
+  /* 搜索引擎 */
+  .nav-search-box {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .nav-engine-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .nav-engine-tabs button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 99px;
+    background: var(--color-block);
+    color: var(--color-meta);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .nav-engine-tabs button:hover,
+  .nav-engine-tabs button.active {
+    background: var(--color-theme);
+    color: #fff;
+  }
+
+  .nav-search-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--color-site-inner);
+    border: 1px solid var(--color-block);
+    border-radius: 99px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .nav-search-input-wrap:focus-within {
+    border-color: var(--color-theme);
+    box-shadow: 0 0 0 3px rgba(61, 217, 182, 0.15);
+  }
+
+  .nav-search-input-wrap > i {
+    padding-left: 18px;
+    color: var(--color-meta);
+  }
+
+  .nav-search-input-wrap input {
+    flex: 1;
+    padding: 14px 12px;
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .nav-search-btn {
+    padding: 0 22px;
+    height: 100%;
+    border: none;
+    background: var(--color-theme);
+    color: #fff;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .nav-search-btn:hover {
+    background: var(--color-hover);
+  }
+
+  /* 分类区块 */
+  .nav-section {
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .nav-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-h3);
+    margin: 0 0 16px;
+    padding-left: 10px;
+    border-left: 4px solid var(--color-theme);
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+
+  .nav-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 12px;
+    border-radius: 14px;
+    background: var(--color-card);
+    border: 1px solid var(--color-block);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--card-accent, var(--color-theme));
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+
+  .nav-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--card-accent, var(--color-theme));
+    box-shadow: var(--nav-shadow-hover);
+  }
+
+  .nav-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-card-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #fff;
+    background: var(--card-accent, var(--color-theme));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-card-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-h4);
+  }
+
+  .nav-card-desc {
+    font-size: 0.75rem;
+    color: var(--color-meta);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .nav-card.hidden {
+    display: none;
+  }
+
+  /* 分类锚点导航 */
+  .nav-anchors {
+    position: sticky;
+    top: 72px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    border-radius: 99px;
+    background: var(--color-card);
+    border: 1px solid var(--color-block);
+    box-shadow: var(--nav-shadow);
+  }
+
+  .nav-anchors a {
+    padding: 6px 14px;
+    border-radius: 99px;
+    background: var(--color-block);
+    color: var(--color-meta);
+    font-size: 0.8125rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .nav-anchors a:hover {
+    background: var(--color-theme);
+    color: #fff;
+  }
+
+  /* 番茄钟 */
+  .pomodoro-card {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    border-radius: var(--nav-radius);
+    background: var(--color-card);
+    border: 1px solid var(--color-block);
+    box-shadow: var(--nav-shadow);
+    text-align: center;
+  }
+
+  .pomodoro-time {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Menlo', 'Ubuntu Mono', monospace;
+    color: var(--color-h1);
+    margin-bottom: 8px;
+  }
+
+  .pomodoro-status {
+    font-size: 0.9375rem;
+    color: var(--color-meta);
+    margin-bottom: 20px;
+  }
+
+  .pomodoro-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .pomodoro-actions button,
+  .pomodoro-modes button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-block);
+    color: var(--color-text);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .pomodoro-actions button:hover:not(:disabled),
+  .pomodoro-modes button:hover {
+    background: var(--color-theme);
+    color: #fff;
+  }
+
+  .pomodoro-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pomodoro-modes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .pomodoro-modes button.active {
+    background: var(--color-theme);
+    color: #fff;
+  }
+
+  /* 无结果提示 */
+  .nav-empty {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--color-meta);
+  }
+
+  .nav-empty i {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .nav-empty.hidden {
+    display: none;
+  }
+
+  /* 页脚 */
+  .nav-footer {
+    text-align: center;
+    padding-top: 24px;
+    color: var(--color-meta);
+    font-size: 0.875rem;
+  }
+
+  .nav-footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .nav-footer-social a {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-block);
+    color: var(--color-meta);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .nav-footer-social a:hover {
+    background: var(--color-theme);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .nav-footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  /* 返回顶部 */
+  .nav-backtop {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-card);
+    color: var(--color-theme);
+    border: 1px solid var(--color-block);
+    box-shadow: var(--nav-shadow);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-backtop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-backtop:hover {
+    background: var(--color-theme);
+    color: #fff;
+  }
+
+  /* 响应式 */
+  @media (max-width: 768px) {
+    .nav-hero {
+      padding: 28px 16px 24px;
+    }
+
+    .nav-hero-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .nav-brand {
+      text-align: center;
+    }
+
+    .nav-site-title {
+      font-size: 1.5rem;
+    }
+
+    .nav-meta-bar {
+      gap: 8px;
+      font-size: 0.8125rem;
+    }
+
+    .nav-divider {
+      display: none;
+    }
+
+    .nav-search-btn {
+      padding: 0 14px;
+      font-size: 0.8125rem;
+    }
+
+    .nav-grid {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 10px;
+    }
+
+    .nav-card {
+      padding: 14px 8px;
+    }
+
+    .nav-card-icon {
+      width: 38px;
+      height: 38px;
+      font-size: 1rem;
+    }
+
+    .nav-card-desc {
+      display: none;
+    }
+
+    .nav-anchors {
+      top: 64px;
+      padding: 10px 12px;
+      border-radius: 12px;
+    }
+
+    .pomodoro-time {
+      font-size: 2.25rem;
+    }
+
+    .nav-backtop {
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+</style>
+
+<script>
+  // ==================== 数据配置 ====================
+
+  // 导航数据：分类 + 站点
+  const navData = [
+    {
+      id: 'tools',
+      title: '常用工具',
+      icon: 'fa-solid fa-toolbox',
+      items: [
+        { name: 'Google', url: 'https://www.google.com', desc: '搜索引擎', icon: 'fa-brands fa-google', color: '#4285F4' },
+        { name: 'GitHub', url: 'https://github.com', desc: '代码托管', icon: 'fa-brands fa-github', color: '#24292F' },
+        { name: 'DeepSeek', url: 'https://chat.deepseek.com', desc: 'AI 对话', icon: 'fa-solid fa-robot', color: '#4D6BFE' },
+        { name: 'ChatGPT', url: 'https://chat.openai.com', desc: 'OpenAI', icon: 'fa-solid fa-bolt', color: '#10A37F' },
+        { name: 'Claude', url: 'https://claude.ai', desc: 'Anthropic', icon: 'fa-solid fa-feather', color: '#CC785C' },
+        { name: 'Perplexity', url: 'https://www.perplexity.ai', desc: 'AI 搜索', icon: 'fa-solid fa-magnifying-glass', color: '#1FB8FF' },
+      ]
+    },
+    {
+      id: 'dev',
+      title: '开发资源',
+      icon: 'fa-solid fa-code',
+      items: [
+        { name: 'Stack Overflow', url: 'https://stackoverflow.com', desc: '技术问答', icon: 'fa-brands fa-stack-overflow', color: '#F48024' },
+        { name: 'MDN', url: 'https://developer.mozilla.org', desc: 'Web 文档', icon: 'fa-brands fa-firefox-browser', color: '#000000' },
+        { name: 'Vue.js', url: 'https://cn.vuejs.org', desc: '前端框架', icon: 'fa-brands fa-vuejs', color: '#42B883' },
+        { name: 'React', url: 'https://react.dev', desc: 'UI 库', icon: 'fa-brands fa-react', color: '#61DAFB' },
+        { name: 'Node.js', url: 'https://nodejs.org', desc: '运行时', icon: 'fa-brands fa-node', color: '#339933' },
+        { name: 'Go', url: 'https://go.dev', desc: '编程语言', icon: 'fa-brands fa-golang', color: '#00ADD8' },
+      ]
+    },
+    {
+      id: 'ai',
+      title: 'AI 协作',
+      icon: 'fa-solid fa-wand-magic-sparkles',
+      items: [
+        { name: 'Cursor', url: 'https://www.cursor.com', desc: 'AI 编辑器', icon: 'fa-solid fa-i-cursor', color: '#1E1E1E' },
+        { name: 'Kimi', url: 'https://kimi.moonshot.cn', desc: '月之暗面', icon: 'fa-solid fa-moon', color: '#4A6CF7' },
+        { name: 'Gemini', url: 'https://gemini.google.com', desc: 'Google AI', icon: 'fa-solid fa-star', color: '#8E75B2' },
+        { name: '通义千问', url: 'https://tongyi.aliyun.com', desc: '阿里 AI', icon: 'fa-solid fa-comments', color: '#615CED' },
+        { name: '文心一言', url: 'https://yiyan.baidu.com', desc: '百度 AI', icon: 'fa-solid fa-brain', color: '#2932E1' },
+        { name: '豆包', url: 'https://www.doubao.com', desc: '字节 AI', icon: 'fa-solid fa-cookie-bite', color: '#FF6A00' },
+      ]
+    },
+    {
+      id: 'learn',
+      title: '学习站点',
+      icon: 'fa-solid fa-graduation-cap',
+      items: [
+        { name: 'Bilibili', url: 'https://www.bilibili.com', desc: '视频学习', icon: 'fa-brands fa-bilibili', color: '#FB7299' },
+        { name: '知乎', url: 'https://www.zhihu.com', desc: '知识社区', icon: 'fa-brands fa-zhihu', color: '#0084FF' },
+        { name: '稀土掘金', url: 'https://juejin.cn', desc: '技术社区', icon: 'fa-solid fa-gem', color: '#1E80FF' },
+        { name: 'CSDN', url: 'https://www.csdn.net', desc: '技术博客', icon: 'fa-solid fa-blog', color: '#FC5531' },
+        { name: '博客园', url: 'https://www.cnblogs.com', desc: '开发者博客', icon: 'fa-solid fa-pen-nib', color: '#21759B' },
+        { name: 'GitBook', url: 'https://www.gitbook.com', desc: '文档平台', icon: 'fa-solid fa-book', color: '#3884FF' },
+      ]
+    },
+    {
+      id: 'test',
+      title: '测试与效率',
+      icon: 'fa-solid fa-vial',
+      items: [
+        { name: 'Jenkins', url: 'https://www.jenkins.io', desc: 'CI/CD', icon: 'fa-brands fa-jenkins', color: '#D24939' },
+        { name: 'Postman', url: 'https://www.postman.com', desc: 'API 测试', icon: 'fa-solid fa-paper-plane', color: '#FF6C37' },
+        { name: 'Selenium', url: 'https://www.selenium.dev', desc: '自动化测试', icon: 'fa-solid fa-robot', color: '#43B02A' },
+        { name: 'Playwright', url: 'https://playwright.dev', desc: 'E2E 测试', icon: 'fa-solid fa-theater-masks', color: '#2EAD33' },
+        { name: 'Notion', url: 'https://www.notion.so', desc: '知识管理', icon: 'fa-solid fa-n', color: '#000000' },
+        { name: 'Excalidraw', url: 'https://excalidraw.com', desc: '在线白板', icon: 'fa-solid fa-pencil', color: '#A25DFF' },
+      ]
+    },
+    {
+      id: 'life',
+      title: '娱乐休闲',
+      icon: 'fa-solid fa-gamepad',
+      items: [
+        { name: 'Steam', url: 'https://store.steampowered.com', desc: '游戏平台', icon: 'fa-brands fa-steam', color: '#1B2838' },
+        { name: '网易云音乐', url: 'https://music.163.com', desc: '音乐', icon: 'fa-solid fa-music', color: '#C20C0C' },
+        { name: 'YouTube', url: 'https://www.youtube.com', desc: '视频', icon: 'fa-brands fa-youtube', color: '#FF0000' },
+        { name: '小红书', url: 'https://www.xiaohongshu.com', desc: '生活社区', icon: 'fa-solid fa-heart', color: '#FF2442' },
+        { name: '微博', url: 'https://weibo.com', desc: '社交媒体', icon: 'fa-brands fa-weibo', color: '#E6162D' },
+        { name: 'Iconfont', url: 'https://www.iconfont.cn', desc: '图标库', icon: 'fa-solid fa-icons', color: '#FF6A00' },
+      ]
+    }
+  ];
+
+  // 快捷入口
+  const quickEntries = [
+    { name: 'GitHub', url: 'https://github.com/JACK-SY', desc: '我的仓库', icon: 'fa-brands fa-github', color: '#24292F' },
+    { name: 'Bilibili', url: 'https://space.bilibili.com/', desc: '视频频道', icon: 'fa-brands fa-bilibili', color: '#FB7299' },
+    { name: 'RSS', url: '/atom.xml', desc: '订阅更新', icon: 'fa-solid fa-rss', color: '#F97316' },
+    { name: '友链', url: '/links/', desc: '友情链接', icon: 'fa-solid fa-link', color: '#EAB308' },
+    { name: '留言', url: '/comments/', desc: '留言交流', icon: 'fa-solid fa-comments', color: '#F97316' },
+    { name: '关于', url: '/about/', desc: '博主简介', icon: 'fa-solid fa-info-circle', color: '#EC4899' },
+  ];
+
+  // 我的博客入口
+  const blogEntries = [
+    { name: '博客首页', url: '/blog/', desc: '文章列表', icon: 'fa-solid fa-house', color: '#22c55e' },
+    { name: '文章归档', url: '/archives/', desc: '按时间归档', icon: 'fa-solid fa-archive', color: '#6366f1' },
+    { name: '分类索引', url: '/categories/', desc: '按分类浏览', icon: 'fa-solid fa-folder-open', color: '#0ea5e9' },
+    { name: '标签云', url: '/tags/', desc: '按标签检索', icon: 'fa-solid fa-tags', color: '#8b5cf6' },
+  ];
+
+  // 社交链接
+  const socialLinks = [
+    { icon: 'fa-brands fa-github', url: 'https://github.com/JACK-SY', title: 'GitHub' },
+    { icon: 'fa-brands fa-bilibili', url: 'https://space.bilibili.com/', title: 'Bilibili' },
+    { icon: 'fa-solid fa-envelope', url: 'mailto:jack@yang.com', title: '邮箱' },
+    { icon: 'fa-solid fa-rss', url: '/atom.xml', title: 'RSS' },
+  ];
+
+  // 站点运行起始日期
+  const siteStartDate = new Date('2026-06-17');
+
+  // ==================== 渲染函数 ====================
+
+  function renderCard(item) {
+    return `
+      <a class="nav-card" href="${item.url}" target="_blank" rel="noopener noreferrer" data-keywords="${item.name} ${item.desc}" style="--card-accent:${item.color}">
+        <div class="nav-card-icon">
+          <i class="${item.icon}"></i>
+        </div>
+        <div class="nav-card-title">${item.name}</div>
+        <div class="nav-card-desc">${item.desc}</div>
+      </a>
+    `;
+  }
+
+  function renderQuick() {
+    document.getElementById('nav-quick-grid').innerHTML = quickEntries.map(renderCard).join('');
+  }
+
+  function renderBlog() {
+    document.getElementById('nav-blog-grid').innerHTML = blogEntries.map(renderCard).join('');
+  }
+
+  function renderCategories() {
+    const container = document.getElementById('nav-categories');
+    container.innerHTML = navData.map(cat => `
+      <section class="nav-section nav-cat" id="nav-cat-${cat.id}" data-keywords="${cat.title}">
+        <h2 class="nav-section-title"><i class="${cat.icon}"></i> ${cat.title}</h2>
+        <div class="nav-grid">
+          ${cat.items.map(renderCard).join('')}
+        </div>
+      </section>
+    `).join('');
+  }
+
+  function renderAnchors() {
+    const container = document.getElementById('nav-anchors');
+    container.innerHTML = navData.map(cat => `
+      <a href="#nav-cat-${cat.id}"><i class="${cat.icon}"></i> ${cat.title}</a>
+    `).join('');
+  }
+
+  function renderFooterSocial() {
+    const container = document.getElementById('nav-footer-social');
+    container.innerHTML = socialLinks.map(link => `
+      <a href="${link.url}" target="_blank" rel="noopener noreferrer" title="${link.title}">
+        <i class="${link.icon}"></i>
+      </a>
+    `).join('');
+  }
+
+  // ==================== 交互功能 ====================
+
+  // 一言
+  async function loadHitokoto() {
+    const el = document.getElementById('hitokoto');
+    try {
+      const res = await fetch('https://v1.hitokoto.cn?c=i&c=k');
+      if (!res.ok) throw new Error('network');
+      const data = await res.json();
+      el.textContent = data.hitokoto + (data.from ? ` —— ${data.from}` : '');
+    } catch (e) {
+      el.textContent = '记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。';
+    }
+  }
+
+  // 问候语
+  function updateGreeting() {
+    const hour = new Date().getHours();
+    const text = hour < 6 ? '夜深了，注意休息' :
+                 hour < 9 ? '早上好，开启新的一天' :
+                 hour < 12 ? '上午好，保持专注' :
+                 hour < 14 ? '中午好，记得休息' :
+                 hour < 18 ? '下午好，继续加油' :
+                 hour < 22 ? '晚上好，放松一下' : '夜深了，早点休息';
+    document.getElementById('greeting').textContent = text;
+  }
+
+  // 时钟与日期
+  function updateClock() {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('zh-CN', { hour12: false });
+    const dateStr = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+    document.getElementById('clock').textContent = timeStr;
+    document.getElementById('date').textContent = dateStr;
+  }
+
+  // 天气：静态展示，点击跳转气象局避免外部 API 被拦截产生控制台错误
+  function loadWeather() {
+    const el = document.getElementById('weather');
+    const textSpan = el.querySelector('span');
+    textSpan.textContent = '南京 · 点击查看天气';
+    el.addEventListener('click', () => {
+      window.open('https://tianqi.qq.com/', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  // 搜索引擎
+  function bindSearchEngine() {
+    const tabs = document.querySelectorAll('#engine-tabs button');
+    const input = document.getElementById('nav-search');
+    const btn = document.getElementById('search-btn');
+    let activeUrl = tabs[0].dataset.url;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeUrl = tab.dataset.url;
+      });
+    });
+
+    function doSearch() {
+      const kw = input.value.trim();
+      if (!kw) return;
+      window.open(activeUrl + encodeURIComponent(kw), '_blank', 'noopener,noreferrer');
+    }
+
+    btn.addEventListener('click', doSearch);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        // 如果当前搜索框有内容且没有选中导航卡片，则使用搜索引擎
+        if (input.value.trim()) {
+          doSearch();
+        }
+      }
+    });
+  }
+
+  // 站内搜索过滤
+  function bindFilter() {
+    const input = document.getElementById('nav-search');
+    const empty = document.getElementById('nav-empty');
+
+    input.addEventListener('input', function () {
+      const keyword = this.value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.nav-card');
+      const sections = document.querySelectorAll('.nav-cat');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = card.getAttribute('data-keywords').toLowerCase();
+        const match = !keyword || text.includes(keyword);
+        card.classList.toggle('hidden', !match);
+        if (match) visibleCount++;
+      });
+
+      sections.forEach(section => {
+        const visibleCards = section.querySelectorAll('.nav-card:not(.hidden)');
+        section.style.display = visibleCards.length || !keyword ? '' : 'none';
+      });
+
+      empty.classList.toggle('hidden', visibleCount > 0 || !keyword);
+    });
+  }
+
+  // 番茄钟
+  function initPomodoro() {
+    const timeEl = document.getElementById('pomodoro-time');
+    const statusEl = document.getElementById('pomodoro-status');
+    const startBtn = document.getElementById('pomodoro-start');
+    const pauseBtn = document.getElementById('pomodoro-pause');
+    const resetBtn = document.getElementById('pomodoro-reset');
+    const modeBtns = document.querySelectorAll('.pomodoro-modes button');
+
+    let totalSeconds = 25 * 60;
+    let remaining = totalSeconds;
+    let timerId = null;
+    let isRunning = false;
+
+    function format(seconds) {
+      const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+      const s = (seconds % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    function updateDisplay() {
+      timeEl.textContent = format(remaining);
+      document.title = isRunning ? `(${format(remaining)}) 羊村导航 - JACK-YANGの个人博客` : '羊村导航 - JACK-YANGの个人博客';
+    }
+
+    function setMode(minutes) {
+      totalSeconds = minutes * 60;
+      remaining = totalSeconds;
+      clearInterval(timerId);
+      isRunning = false;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      statusEl.textContent = '准备开始专注';
+      updateDisplay();
+    }
+
+    startBtn.addEventListener('click', () => {
+      if (isRunning) return;
+      isRunning = true;
+      startBtn.disabled = true;
+      pauseBtn.disabled = false;
+      statusEl.textContent = '专注中...';
+      timerId = setInterval(() => {
+        remaining--;
+        updateDisplay();
+        if (remaining <= 0) {
+          clearInterval(timerId);
+          isRunning = false;
+          startBtn.disabled = false;
+          pauseBtn.disabled = true;
+          statusEl.textContent = '时间到，休息一下吧';
+          if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification('番茄钟', { body: '专注时间结束，休息一下吧' });
+          }
+        }
+      }, 1000);
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      clearInterval(timerId);
+      isRunning = false;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      statusEl.textContent = '已暂停';
+      updateDisplay();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      clearInterval(timerId);
+      const activeMode = document.querySelector('.pomodoro-modes button.active');
+      setMode(parseInt(activeMode.dataset.min, 10));
+    });
+
+    modeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        setMode(parseInt(btn.dataset.min, 10));
+      });
+    });
+
+    updateDisplay();
+  }
+
+  // 返回顶部
+  function initBackTop() {
+    const btn = document.getElementById('nav-backtop');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 300);
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // 站点运行时长
+  function updateRuntime() {
+    const now = new Date();
+    const days = Math.floor((now - siteStartDate) / (1000 * 60 * 60 * 24));
+    document.getElementById('site-runtime').textContent = `已运行 ${days} 天`;
+    document.getElementById('site-year').textContent = now.getFullYear();
+  }
+
+  // 平滑锚点滚动
+  function initSmoothAnchor() {
+    document.querySelectorAll('.nav-anchors a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // ==================== 初始化 ====================
+
+  function initNavHome() {
+    updateGreeting();
+    updateClock();
+    setInterval(updateClock, 1000);
+    updateRuntime();
+    renderQuick();
+    renderBlog();
+    renderCategories();
+    renderAnchors();
+    renderFooterSocial();
+    bindSearchEngine();
+    bindFilter();
+    initPomodoro();
+    initBackTop();
+    initSmoothAnchor();
+    loadHitokoto();
+    loadWeather();
+
+    // 请求通知权限（番茄钟结束提醒）
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavHome);
+  } else {
+    initNavHome();
+  }
+
+  // 兼容 Volantis PJAX：页面通过 PJAX 返回时重新初始化
+  document.addEventListener('pjax:complete', initNavHome);
+</script>
+
+  </div>
+  
+  
   
     
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-21T10:27:14+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2026年8月21日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：3.5k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：19 分钟</p>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jack-sy.github.io/index.html&title=羊村导航 - JACK-YANGの个人博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jack-sy.github.io/index.html&title=羊村导航 - JACK-YANGの个人博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jack-sy.github.io/index.html&title=羊村导航 - JACK-YANGの个人博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
+  
+
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
 
 
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
-  
-
-  
-    
-    
-      
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='/img/blog/avatar.jpg' alt='avatar' />
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">JACK-YANGの个人博客</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%B7%A5%E4%BD%9C/" href="/categories/%E5%B7%A5%E4%BD%9C/"
-            active-action="action-categoriesE5B7A5E4BD9C"
-            ><div class='name'>工作</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9D%82%E9%A1%B9/" href="/categories/%E6%9D%82%E9%A1%B9/"
-            active-action="action-categoriesE69D82E9A1B9"
-            ><div class='name'>杂项</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/" href="/categories/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/"
-            active-action="action-categoriesE6B58BE8AF95E7AEA1E79086"
-            ><div class='name'>测试管理</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"
-            active-action="action-categoriesE997AEE9A298E8A7A3E586B3"
-            ><div class='name'>问题解决</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget grid desktop mobile pjax">
-    
-  <header>
-    
-      <i class="fa-solid fa-compass fa-fw" aria-hidden="true"></i><span class='name'>站内导航</span>
-    
-  </header>
-
-
-    <div class='content'>
-      <div class="grid fixed">
-        
-          <a class="flat-box" href="/tags/" title="标签">
-            <i class="fa-solid fa-tags fa-fw" aria-hidden="true" style="color: #8b5cf6"></i>
-            标签
-          </a>
-        
-          <a class="flat-box" href="/categories/" title="分类">
-            <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true" style="color: #0ea5e9"></i>
-            分类
-          </a>
-        
-          <a class="flat-box" href="/archives/" title="归档">
-            <i class="fa-solid fa-archive fa-fw" aria-hidden="true" style="color: #6366f1"></i>
-            归档
-          </a>
-        
-          <a class="flat-box" href="/comments/" title="留言">
-            <i class="fa-solid fa-comments fa-fw" aria-hidden="true" style="color: #f97316"></i>
-            留言
-          </a>
-        
-          <a class="flat-box" href="/links/" title="友链">
-            <i class="fa-solid fa-link fa-fw" aria-hidden="true" style="color: #eab308"></i>
-            友链
-          </a>
-        
-          <a class="flat-box" href="/about/" title="关于">
-            <i class="fa-solid fa-info-circle fa-fw" aria-hidden="true" style="color: #ec4899"></i>
-            关于
-          </a>
-        
-      </div>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget recent desktop mobile pjax">
-    
-  <header>
-    
-      <i class="fa-solid fa-clock fa-fw" aria-hidden="true"></i><span class='name'>最近发布</span>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry recent-list">
-        
-        
-          <li>
-            <a class="flat-box" href="/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/" title="Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案">
-              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-              <span class="recent-category">问题解决</span>
-              <span class="recent-title">Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案</span>
-              <span class="recent-date">2026-08-20</span>
-            </a>
-          </li>
-        
-          <li>
-            <a class="flat-box" href="/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/" title="测试规范档案的变更腐烂与本地裁决保护机制">
-              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-              <span class="recent-category">测试管理</span>
-              <span class="recent-title">测试规范档案的变更腐烂与本地裁决保护机制</span>
-              <span class="recent-date">2026-08-14</span>
-            </a>
-          </li>
-        
-          <li>
-            <a class="flat-box" href="/2026/06/18/VPN%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E6%95%85%E9%9A%9C%E5%AE%8C%E6%95%B4%E6%80%BB%E7%BB%93/" title="VPN无法联网故障完整总结">
-              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-              <span class="recent-category">问题解决</span>
-              <span class="recent-title">VPN无法联网故障完整总结</span>
-              <span class="recent-date">2026-06-18</span>
-            </a>
-          </li>
-        
-          <li>
-            <a class="flat-box" href="/2026/06/17/%E7%94%B5%E8%84%91C%E7%9B%98%E7%82%B8%E4%BA%86/" title="电脑C盘炸了">
-              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-              <span class="recent-category">工作</span>
-              <span class="recent-title">电脑C盘炸了</span>
-              <span class="recent-date">2026-06-17</span>
-            </a>
-          </li>
-        
-          <li>
-            <a class="flat-box" href="/2026/06/17/hello-world/" title="Hello World">
-              <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-              <span class="recent-category">杂项</span>
-              <span class="recent-title">Hello World</span>
-              <span class="recent-date">2026-06-17</span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>5 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2026-08-20 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
   
 
 
@@ -3542,6 +4378,26 @@ Qu...
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3585,15 +4441,15 @@ Qu...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="full";
-      cover_wrapper.style.display="";
-      scroll_down.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
     
   
 </script>
@@ -3625,6 +4481,33 @@ Qu...
               </a>
             
           
+            
+              <a href="https://github.com/JACK-SY"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://space.bilibili.com/"
+                class="social fab fa-bilibili flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="mailto:jack@yang.com"
+                class="social fa-solid fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
         </div>
       
     
@@ -3638,7 +4521,10 @@ Qu...
       
         本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.4" target="_blank" class="codename">Volantis</a>
-        作为主题
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
       
     
       
@@ -3686,6 +4572,122 @@ Qu...
 
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+volantis.pjax.push(bindToggleButton);
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
 
 
 
@@ -3765,13 +4767,87 @@ Qu...
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
 
 
 
 
 
 
+      <script>
+  volantis.layoutHelper("comments",`<div id="utterances"></div>`)
+  volantis.utterances={}
+  volantis.utterances.ThemeLight='github-light';
+  volantis.utterances.ThemeDark='github-dark';
+  volantis.utterances.Theme=volantis.utterances.ThemeLight;
+  function pjax_utterances(){
+    if(!document.getElementById("utterances"))return;
+    
+      if(volantis.dark.mode=="dark"){
+        volantis.utterances.Theme=volantis.utterances.ThemeDark;
+      }else{
+        volantis.utterances.Theme=volantis.utterances.ThemeLight;
+      }
+    
+    setTimeout(function() {
+      var checkUtterances = setInterval(function () {
+        var HEAD = document.getElementById("utterances");
+        if (!HEAD) return
+        clearInterval(checkUtterances)
+        try {
+          document.getElementById("utterances").innerHTML="";
+        } catch (error) {}
+        var script = document.createElement('script');
+        script.setAttribute('src','https://utteranc.es/client.js');
+        script.setAttribute('repo','JACK-SY/JACK-SY.github.io');
+        let issuenumber = '';
+        if (issuenumber) {
+          script.setAttribute('issue-number', issuenumber);
+        } else {
+          script.setAttribute('issue-term', 'pathname');
+        }
+        script.setAttribute('theme', volantis.utterances.Theme );
+        script.setAttribute('label','✨💬✨');
+        script.setAttribute('crossorigin', "anonymous");
+        HEAD.appendChild(script);
+      }, 200)
+    });
+  }
+  pjax_utterances();
+  volantis.pjax.push(pjax_utterances);
+  volantis.dark.push(pjax_utterances);
+</script>
 
+    
+
+
+
+
+  <script defer src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js" data-pjax></script>
 
 
 <!-- optional -->
@@ -4188,7 +5264,7 @@ const performanceMonitor = {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script src="/js/geometric-bg.js" data-pjax></script>
+    <script src="/assets/js/geometric-bg.js" data-pjax></script>
 
     <!-- Custom Files bodyEnd end-->
   </body>

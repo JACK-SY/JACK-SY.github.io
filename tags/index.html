@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.4">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="http://example.com/2026/08/20/Git拉取后硬链接自动修复方案/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://jack-sy.github.io/tags/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,29 +28,26 @@
     <link rel="shortcut icon" type='image/x-icon' href="/img/blog/favicon.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="/diy-font/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/HYXiaoMaiTiJ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="JACK-YANGの个人博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案 - JACK-YANGの个人博客</title>
-  <meta name="keywords" content="问题解决, Git,硬链接,Git Hook,Windows,null">
-  <meta desc name="description" content="在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。 - JACK-YANG - JACK-YANGの个人博客">
+  <title>标签 - JACK-YANGの个人博客</title>
+  <meta name="keywords" content="博客,技术,测试管理,AI协作,问题解决">
+  <meta desc name="description" content="记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。 - JACK-YANG - JACK-YANGの个人博客">
   
-<meta property="og:type" content="article">
-<meta property="og:title" content="Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案">
-<meta property="og:url" content="http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="标签">
+<meta property="og:url" content="https://jack-sy.github.io/tags/index.html">
 <meta property="og:site_name" content="JACK-YANGの个人博客">
-<meta property="og:description" content="在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。">
+<meta property="og:description" content="所有文章标签汇总，点击标签查看相关文章。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2026-08-20T15:37:42.000Z">
-<meta property="article:modified_time" content="2026-08-20T15:43:59.573Z">
+<meta property="article:published_time" content="2026-08-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-21T02:58:18.707Z">
 <meta property="article:author" content="JACK-YANG">
-<meta property="article:tag" content="Git">
-<meta property="article:tag" content="Git Hook">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="硬链接">
+<meta property="article:tag" content="博客,技术,测试管理,AI协作,问题解决">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -800,9 +797,161 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 @font-face {
   font-family: 'HYXiaoMaiTiJ';
-  src: url("/diy-font/HYXiaoMaiTiJ.woff2");
+  src: url("/assets/fonts/HYXiaoMaiTiJ.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1636,6 +1785,11 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 /* 最近发布：简洁卡片式 - 分类徽章 + 标题 + 日期 */
 .widget .recent-list {
   list-style: none;
@@ -1741,6 +1895,12 @@ ul.list-v >li>a:hover {
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme")
+      if(userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2448,7 +2608,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787240654782),
+    lastupdate: new Date(1787282884586),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2495,7 +2655,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 </script>
 
   
-    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"JACK-YANGの个人博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/问题解决/","name":"问题解决"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/08/20/Git拉取后硬链接自动修复方案/","name":"Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案","description":"在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/","wordCount":0,"datePublished":"2026-08-20T15:37:42.000Z","dateModified":"2026-08-20T15:43:59.573Z","articleSection":"问题解决","keywords":"Git,硬链接,Git Hook,Windows","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","sameAs":["https://github.com/JACK-SY"],"description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jack-sy.github.io/","name":"JACK-YANGの个人博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","keywords":"博客,技术,测试管理,AI协作,问题解决","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。","author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","url":"https://jack-sy.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://jack-sy.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"标签","description":"记录工作中的技术实践与问题解决，分享测试管理、AI 协作与开发经验。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jack-sy.github.io/tags/index.html"},"author":{"@type":"Person","name":"JACK-YANG","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jack-sy.github.io/"},"publisher":{"@type":"Organization","name":"JACK-YANGの个人博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jack-sy.github.io/tags/index.html","wordCount":0,"datePublished":"2026-08-20T16:00:00.000Z","dateModified":"2026-08-21T02:58:18.707Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
   
   <!-- import head_end begin -->
   <!-- import head_end end -->
@@ -2559,13 +2719,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2593,11 +2753,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2610,11 +2804,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2637,6 +2831,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
                 </a>
                 
               </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
           
@@ -2680,13 +2884,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="笔记"
+                href="/blog/" title="博客"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-blog"
                   >
-                  <i class='fa-solid fa-check-square fa-fw'></i>笔记
+                  <i class='fa-solid fa-blog fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2714,11 +2918,45 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="留言"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/comments/" title="留言"
+                  
+                  
+                  
+                    active-action="action-comments"
                   >
                   <i class='fa-solid fa-comments fa-fw'></i>留言
                 </a>
@@ -2731,11 +2969,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="友链"
+                href="/links/" title="友链"
                   
                   
                   
-                    active-action="action-home"
+                    active-action="action-links"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
@@ -2761,6 +2999,16 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
             
           
             
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+            
           </ul>
         </li>
 			</ul>
@@ -2778,10 +3026,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
     
       <!-- see: /layout/_partial/scripts/_ctrl.ejs -->
-      <div id="half" class='cover-wrapper post featured' style="display: ;">
+      <div id="half" class='cover-wrapper tag featured' style="display: ;">
         
 
-  <div class='cover-bg lazyload placeholder' data-bg="https://unpkg.com/volantis-static@media/tiles/cover/lighthouse.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2803,11 +3051,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-house fa-fw'></i><p>首页</p>
             </a>
           
-            <a href="/"
+            <a href="/blog/"
               
               
-              active-action="action-home">
-              <i class='fas fa-check-square fa-fw'></i><p>笔记</p>
+              active-action="action-blog">
+              <i class='fas fa-blog fa-fw'></i><p>博客</p>
             </a>
           
             <a href="/archives/"
@@ -2817,11 +3065,18 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               <i class='fas fa-archive fa-fw'></i><p>归档</p>
             </a>
           
-            <a href="/comments/"
+            <a href="/categories/"
               
               
-              active-action="action-comments">
-              <i class='fas fa-comments fa-fw'></i><p>留言</p>
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
             <a href="/links/"
@@ -2853,344 +3108,26 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/08/20/Git拉取后硬链接自动修复方案/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="JACK-YANGの个人博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案">
-    <meta itemprop="description" content="在 Windows + Git 环境下，git pull 后硬链接静默断裂的问题排查与 post-merge 钩子自动修复方案。">
-  </span>
   
-
-
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  <div class="article-meta" id="top">
     
-    
-    
-      <h1 class="title" itemprop="name headline">
-        Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案
-      </h1>
-      <div class='new-meta-box'>
-        
-          
+      <div class='post-wrapper'>
+        <article id="tag" class="post article white-box reveal shadow floatable blur">
+          <h2>标签</h2>
+          <div class="all-tags">
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow" alt="author">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">JACK-YANG</p>
-  </a>
-</div>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI%E5%8D%8F%E4%BD%9C/" rel="tag">AI协作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git-Hook/" rel="tag">Git Hook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPN/" rel="tag">VPN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83/" rel="tag">测试规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93%E5%90%8C%E6%AD%A5/" rel="tag">知识库同步</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A1%AC%E9%93%BE%E6%8E%A5/" rel="tag">硬链接</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%AA%E4%BA%BAblog/" rel="tag">第一次个人blog</a><span class="tag-list-count">1</span></li></ul>
+          </div>
+          <br>
+          <blockquote>
+<p>所有文章标签汇总，点击标签查看相关文章。</p>
+</blockquote>
 
-          
-        
-          
-            
-  
-  
-  
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url"><span itemprop="name">问题解决</span></a>
-      </span>
-    
-  </div>
-  
-
-
-
-          
-        
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-08-20T23:37:42+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2026年8月20日</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
+        </article>
       </div>
     
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <blockquote>
-<p>在 Windows + Git 环境下，项目中的两个文件通过硬链接共享同一份内容。但每次 <code>git pull</code> 后硬链接就断了，两份文件悄悄变成独立副本，内容不再同步。本文记录这个问题的排查过程和最终解决方案。</p>
-</blockquote>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我的项目是鼎捷雅典娜 AI 模型运控平台的 QA 测试管理工作区，纯文档项目。项目中有两个关键配置文件：</p>
-<ul>
-<li><code>AGENTS.md</code> — Codex 等 AI 编码代理读取的项目指令文件</li>
-<li><code>CLAUDE.md</code> — Claude Code 等 AI 编码代理读取的项目指令文件</li>
-</ul>
-<p>两个文件内容必须完全一致。最自然的做法是硬链接（Hard Link）：两个文件名指向磁盘上同一份数据，改一个另一个自动同步，零冗余、零延迟。</p>
-<p>在 Windows 上用以下命令创建硬链接：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /H CLAUDE.<span class="built_in">md</span> AGENTS.<span class="built_in">md</span></span><br></pre></td></tr></table></figure>
-
-<p>创建后一切正常，<code>fsutil hardlink list</code> 能看到两个文件名指向同一 inode。</p>
-<h2 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h2><p>每次 <code>git pull</code> 拉取仓库更新后，<code>CLAUDE.md</code> 和 <code>AGENTS.md</code> 的硬链接就断了。<code>fsutil hardlink list</code> 显示它们变成了各自独立的文件，修改 <code>AGENTS.md</code> 后 <code>CLAUDE.md</code> 不再同步。</p>
-<p>更麻烦的是：这个问题是<strong>静默发生的</strong>。没有任何错误提示，Git 正常完成 pull，但硬链接已经悄悄断裂。如果不定期检查，可能过了很久才发现两个文件内容已经不一致。</p>
-<h2 id="根因分析"><a href="#根因分析" class="headerlink" title="根因分析"></a>根因分析</h2><p>硬链接断裂的原因在于 Git 操作文件的方式。</p>
-<p>当 <code>git pull</code>（本质是 <code>git fetch</code> + <code>git merge</code>）检测到某个文件在远端有更新时，更新工作区文件的流程是：</p>
-<ol>
-<li><strong>删除</strong>工作区中的旧文件</li>
-<li><strong>写入</strong>新内容到工作区</li>
-</ol>
-<p>这个”删除 → 新建”的过程会破坏硬链接。因为新建的文件获得了一个新的 inode，和原来通过硬链接关联的文件不再共享同一份数据。</p>
-<p>这不是 Git 的 bug，而是 Git 的设计行为 —— Git 管理的是 blob 对象到工作区文件的映射，不关心工作区文件之间是否存在硬链接关系。</p>
-<p>同理，<code>git checkout</code>（切分支）和 <code>git reset --hard</code> 也会触发同样的文件替换流程。</p>
-<h2 id="解决方案：Git-Hook-自动重建"><a href="#解决方案：Git-Hook-自动重建" class="headerlink" title="解决方案：Git Hook 自动重建"></a>解决方案：Git Hook 自动重建</h2><p>Git 提供了钩子（Hook）机制，允许在特定事件发生后自动执行脚本。<code>post-merge</code> 钩子在每次 <code>git merge</code>（包括 <code>git pull</code> 中的 merge 阶段）完成后触发。</p>
-<p>在 <code>.git/hooks/</code> 目录下创建 <code>post-merge</code> 文件（无扩展名）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># Auto-rebuild CLAUDE.md hard link to AGENTS.md after git pull</span></span><br><span class="line"><span class="built_in">cd</span> <span class="string">&quot;<span class="subst">$(git rev-parse --show-toplevel)</span>&quot;</span></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">&quot;AGENTS.md&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">rm</span> -f <span class="string">&quot;CLAUDE.md&quot;</span></span><br><span class="line">    <span class="built_in">ln</span> <span class="string">&quot;AGENTS.md&quot;</span> <span class="string">&quot;CLAUDE.md&quot;</span> 2&gt;/dev/null || cmd //c <span class="string">&quot;mklink /H CLAUDE.md AGENTS.md&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="脚本逐行解读"><a href="#脚本逐行解读" class="headerlink" title="脚本逐行解读"></a>脚本逐行解读</h3><table>
-<thead>
-<tr>
-<th>行</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>#!/bin/sh</code></td>
-<td>指定用 shell 执行（Git for Windows 自带 Git Bash）</td>
-</tr>
-<tr>
-<td><code>cd &quot;$(git rev-parse --show-toplevel)&quot;</code></td>
-<td>进入仓库根目录，确保不论在哪个子目录执行 pull 都能正确定位文件</td>
-</tr>
-<tr>
-<td><code>if [ -f &quot;AGENTS.md&quot; ]</code></td>
-<td>确认源文件存在，避免在 AGENTS.md 被删除的分支上报错</td>
-</tr>
-<tr>
-<td><code>rm -f &quot;CLAUDE.md&quot;</code></td>
-<td>删除可能已断裂的 CLAUDE.md（<code>-f</code> 表示不存在也不报错）</td>
-</tr>
-<tr>
-<td><code>ln &quot;AGENTS.md&quot; &quot;CLAUDE.md&quot;</code></td>
-<td>用 Unix <code>ln</code> 创建硬链接（Git Bash 环境支持）</td>
-</tr>
-<tr>
-<td><code>cmd //c &quot;mklink /H CLAUDE.md AGENTS.md&quot;</code></td>
-<td>回退方案：如果 <code>ln</code> 失败（纯 Windows 环境），用 Windows 原生 <code>mklink /H</code> 创建硬链接</td>
-</tr>
-</tbody></table>
-<h3 id="为什么用-ln-而不是直接用-mklink"><a href="#为什么用-ln-而不是直接用-mklink" class="headerlink" title="为什么用 ln 而不是直接用 mklink"></a>为什么用 <code>ln</code> 而不是直接用 <code>mklink</code></h3><p>Git for Windows 的 <code>post-merge</code> 钩子默认在 Git Bash 环境中执行，<code>ln</code> 是内置命令。但有些用户可能只装了 Git 而没有完整的 Git Bash，这时 <code>ln</code> 会失败，脚本通过 <code>||</code> 回退到 <code>cmd //c &quot;mklink /H&quot;</code>，兼容纯 Windows 环境。</p>
-<h2 id="效果验证"><a href="#效果验证" class="headerlink" title="效果验证"></a>效果验证</h2><p>安装钩子后，执行 <code>git pull</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">Updating abc1234..def5678</span><br><span class="line">Fast-forward</span><br><span class="line"> AGENTS.md | 2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
-
-<p>钩子自动执行，验证硬链接：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; fsutil hardlink list CLAUDE.<span class="built_in">md</span></span><br><span class="line">\Dgw\模型平台\AI_ALL\CLAUDE.<span class="built_in">md</span></span><br><span class="line">\Dgw\模型平台\AI_ALL\AGENTS.<span class="built_in">md</span></span><br></pre></td></tr></table></figure>
-
-<p>两个文件名指向同一 inode，硬链接恢复。</p>
-<h2 id="补充：覆盖-git-checkout-场景"><a href="#补充：覆盖-git-checkout-场景" class="headerlink" title="补充：覆盖 git checkout 场景"></a>补充：覆盖 <code>git checkout</code> 场景</h2><p><code>post-merge</code> 只覆盖 <code>git pull</code>。如果通过 <code>git checkout</code> 切换分支，硬链接同样会断裂，但 <code>post-merge</code> 不会触发。</p>
-<p>解决方案是再加一个 <code>post-checkout</code> 钩子，内容与 <code>post-merge</code> 完全相同：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># Auto-rebuild CLAUDE.md hard link to AGENTS.md after git checkout</span></span><br><span class="line"><span class="built_in">cd</span> <span class="string">&quot;<span class="subst">$(git rev-parse --show-toplevel)</span>&quot;</span></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">&quot;AGENTS.md&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">rm</span> -f <span class="string">&quot;CLAUDE.md&quot;</span></span><br><span class="line">    <span class="built_in">ln</span> <span class="string">&quot;AGENTS.md&quot;</span> <span class="string">&quot;CLAUDE.md&quot;</span> 2&gt;/dev/null || cmd //c <span class="string">&quot;mklink /H CLAUDE.md AGENTS.md&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-<p>这样 <code>git pull</code> 和 <code>git checkout</code> 两个场景都能覆盖。</p>
-<h2 id="已知局限"><a href="#已知局限" class="headerlink" title="已知局限"></a>已知局限</h2><table>
-<thead>
-<tr>
-<th>局限</th>
-<th>说明</th>
-<th>缓解方式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>钩子不随仓库分发</strong></td>
-<td><code>.git/hooks/</code> 下的文件不进入版本控制，<code>git clone</code> 不会带上</td>
-<td>新克隆的仓库需手动安装钩子，或写一个 <code>setup.sh</code> 一键安装</td>
-</tr>
-<tr>
-<td><strong><code>git reset --hard</code> 未覆盖</strong></td>
-<td><code>reset --hard</code> 不触发 <code>post-merge</code> 也不触发 <code>post-checkout</code></td>
-<td>需手动重建硬链接，或接受偶发断裂</td>
-</tr>
-<tr>
-<td><strong>跨平台兼容性</strong></td>
-<td>脚本用 <code>#!/bin/sh</code>，在 Linux&#x2F;macOS 上 <code>ln</code> 原生可用，Windows 上靠 Git Bash</td>
-<td>回退方案 <code>mklink /H</code> 已覆盖纯 Windows 环境</td>
-</tr>
-</tbody></table>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
-<thead>
-<tr>
-<th>要点</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>问题本质</strong></td>
-<td>Git 更新工作区文件时执行”删除 → 新建”，破坏硬链接</td>
-</tr>
-<tr>
-<td><strong>解决方案</strong></td>
-<td><code>post-merge</code> 钩子自动重建硬链接</td>
-</tr>
-<tr>
-<td><strong>适用场景</strong></td>
-<td>Windows &#x2F; Linux &#x2F; macOS 通用，依赖 Git Bash 或系统 shell</td>
-</tr>
-<tr>
-<td><strong>覆盖范围</strong></td>
-<td><code>git pull</code>（post-merge）+ <code>git checkout</code>（post-checkout）</td>
-</tr>
-</tbody></table>
-<p>如果你也有多个文件需要保持硬链接同步的场景，这个方案可以直接复用 —— 把文件名换成你自己的就行。</p>
-
-  </div>
   
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
-      
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
-      
-    </div>
-  
-  
-    
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-20T23:43:59+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2026年8月20日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Git/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Git</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%A1%AC%E9%93%BE%E6%8E%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>硬链接</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Git-Hook/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Git Hook</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Windows/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Windows</p></a></div>
-  <span hidden itemprop="keywords">Git 硬链接 Git Hook Windows</span>
-  
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/&title=Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案 - JACK-YANGの个人博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/&title=Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案 - JACK-YANGの个人博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/08/20/Git%E6%8B%89%E5%8F%96%E5%90%8E%E7%A1%AC%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/&title=Git 拉取后硬链接丢失？一个 Git Hook 自动修复方案 - JACK-YANGの个人博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
-  
-  
-
-  
-    <div class="prev-next">
-      
-      
-        <a class='next' href='/2026/08/14/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/'>
-          <p class='title'>测试规范档案的变更腐烂与本地裁决保护机制<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>解决 AI 协作测试管理中的两个痛点：规范导航表的变更腐烂与本地PRD裁决保护，对应变更协议+自检脚本和本地裁决标注+同步检查矩阵。</p>
-        </a>
-      
-    </div>
-  
-  <!-- 文章推荐 -->
-  
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
-  
-
-  
-
-
-
-
-
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3209,19 +3146,9 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%87%BA%E7%8E%B0"><span class="toc-text">问题出现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-text">根因分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AGit-Hook-%E8%87%AA%E5%8A%A8%E9%87%8D%E5%BB%BA"><span class="toc-text">解决方案：Git Hook 自动重建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E9%80%90%E8%A1%8C%E8%A7%A3%E8%AF%BB"><span class="toc-text">脚本逐行解读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-ln-%E8%80%8C%E4%B8%8D%E6%98%AF%E7%9B%B4%E6%8E%A5%E7%94%A8-mklink"><span class="toc-text">为什么用 ln 而不是直接用 mklink</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E9%AA%8C%E8%AF%81"><span class="toc-text">效果验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%EF%BC%9A%E8%A6%86%E7%9B%96-git-checkout-%E5%9C%BA%E6%99%AF"><span class="toc-text">补充：覆盖 git checkout 场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E5%B1%80%E9%99%90"><span class="toc-text">已知局限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
-    </div>
-  </section>
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -3276,14 +3203,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 </aside>
 
 
-
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3332,6 +3258,33 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
               </a>
             
           
+            
+              <a href="https://github.com/JACK-SY"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://space.bilibili.com/"
+                class="social fab fa-bilibili flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="mailto:jack@yang.com"
+                class="social fa-solid fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
         </div>
       
     
@@ -3345,7 +3298,10 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
       
         本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.4" target="_blank" class="codename">Volantis</a>
-        作为主题
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
       
     
       
@@ -3393,6 +3349,122 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+volantis.pjax.push(bindToggleButton);
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
 
 
 
@@ -3472,13 +3544,87 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      pjax_scrollrebeal();
+    }
+  }
+  volantis.js("https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+  volantis.pjax.push(
+    pjax_scrollrebeal,
+    "pjax_scrollrebeal",
+    (setRequestAnimationFrame = false)
+  );
+</script>
 
 
 
 
 
 
+      <script>
+  volantis.layoutHelper("comments",`<div id="utterances"></div>`)
+  volantis.utterances={}
+  volantis.utterances.ThemeLight='github-light';
+  volantis.utterances.ThemeDark='github-dark';
+  volantis.utterances.Theme=volantis.utterances.ThemeLight;
+  function pjax_utterances(){
+    if(!document.getElementById("utterances"))return;
+    
+      if(volantis.dark.mode=="dark"){
+        volantis.utterances.Theme=volantis.utterances.ThemeDark;
+      }else{
+        volantis.utterances.Theme=volantis.utterances.ThemeLight;
+      }
+    
+    setTimeout(function() {
+      var checkUtterances = setInterval(function () {
+        var HEAD = document.getElementById("utterances");
+        if (!HEAD) return
+        clearInterval(checkUtterances)
+        try {
+          document.getElementById("utterances").innerHTML="";
+        } catch (error) {}
+        var script = document.createElement('script');
+        script.setAttribute('src','https://utteranc.es/client.js');
+        script.setAttribute('repo','JACK-SY/JACK-SY.github.io');
+        let issuenumber = '';
+        if (issuenumber) {
+          script.setAttribute('issue-number', issuenumber);
+        } else {
+          script.setAttribute('issue-term', 'pathname');
+        }
+        script.setAttribute('theme', volantis.utterances.Theme );
+        script.setAttribute('label','✨💬✨');
+        script.setAttribute('crossorigin', "anonymous");
+        HEAD.appendChild(script);
+      }, 200)
+    });
+  }
+  pjax_utterances();
+  volantis.pjax.push(pjax_utterances);
+  volantis.dark.push(pjax_utterances);
+</script>
 
+    
+
+
+
+
+  <script defer src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js" data-pjax></script>
 
 
 <!-- optional -->
@@ -3895,7 +4041,7 @@ const performanceMonitor = {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script src="/js/geometric-bg.js" data-pjax></script>
+    <script src="/assets/js/geometric-bg.js" data-pjax></script>
 
     <!-- Custom Files bodyEnd end-->
   </body>
