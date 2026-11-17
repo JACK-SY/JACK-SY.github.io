@@ -1986,3 +1986,12 @@ ul.list-v >li>a:hover {
   background: none !important;
   color: var(--color-meta) !important;
 }
+/* 缩减友链、留言板等页面的顶部留白
+ * 主题默认 .post 有 padding:1.5*gap + #top margin-top:1*gap，内容少的页面显得空白过大 */
+.article.post.white-box {
+  padding-top: 8px !important;
+}
+.article.post.white-box .article-meta#top {
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+}

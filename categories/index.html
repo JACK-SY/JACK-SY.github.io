@@ -2039,6 +2039,15 @@ ul.list-v >li>a:hover {
   background: none !important;
   color: var(--color-meta) !important;
 }
+/* 缩减友链、留言板等页面的顶部留白
+ * 主题默认 .post 有 padding:1.5*gap + #top margin-top:1*gap，内容少的页面显得空白过大 */
+.article.post.white-box {
+  padding-top: 8px !important;
+}
+.article.post.white-box .article-meta#top {
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2756,7 +2765,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787289632825),
+    lastupdate: new Date(1794883147015),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3265,6 +3274,13 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
           <h2>分类</h2>
           <div class="all-cats">
             
+              
+                <a class="" href="/categories/AI%E5%8D%8F%E4%BD%9C/">
+                  <span><i class='fa-solid fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;AI协作</span>
+                  <span class="title">
+                    (1)
+                  </span>
+                </a>
               
                 <a class="" href="/categories/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">
                   <span><i class='fa-solid fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;技术实践</span>

@@ -2042,6 +2042,15 @@ ul.list-v >li>a:hover {
   background: none !important;
   color: var(--color-meta) !important;
 }
+/* 缩减友链、留言板等页面的顶部留白
+ * 主题默认 .post 有 padding:1.5*gap + #top margin-top:1*gap，内容少的页面显得空白过大 */
+.article.post.white-box {
+  padding-top: 8px !important;
+}
+.article.post.white-box .article-meta#top {
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2759,7 +2768,7 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
     root: '/',
     debug: false,
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787289632825),
+    lastupdate: new Date(1794883147015),
     cdn: {
       izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3620,6 +3629,11 @@ volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2026/11/dsh-notify-yimit%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>dsh-notify-yimit 简单使用说明</p>
+          <p class='content'>dsh-notify-yimit 是 DSH Harness 的通知插件，在需要审批、回答或任务状态变化时，通过 Windows 系统通知或桌面右下角浮窗提醒你，避免错过操作。</p>
+        </a>
       
       
         <a class='next' href='/2026/08/%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83%E6%A1%A3%E6%A1%88%E7%9A%84%E5%8F%98%E6%9B%B4%E8%85%90%E7%83%82%E4%B8%8E%E6%9C%AC%E5%9C%B0%E8%A3%81%E5%86%B3%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/'>
